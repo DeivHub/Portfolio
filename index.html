@@ -1,0 +1,4102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>David Ramirez — Content Creator & Marketing Digital</title>
+
+  <meta
+    name="description"
+    content="David Ramirez — Content Creator, UGC, IA & Marketing Digital. Contenido que conecta marcas con audiencias reales."
+  />
+
+  <!-- =====================================================
+       FONTS
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =====================================================
+       TAILWIND
+  ====================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          colors: {
+            cream: '#FEFFF0',
+            brown: '#3B2115',
+            brownLight: '#7A4A2E'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- =====================================================
+       GLOBAL STYLES
+  ====================================================== -->
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #FEFFF0;
+      color: #11100E;
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #11100E;
+      color: #FEFFF0;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    a,
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
+    .hero-image {
+      background-image: url('./assets/Hero-david.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero-image {
+        background-position: 62% center;
+      }
+    }
+
+    /* =====================================================
+       OUTLINE TEXT
+    ====================================================== */
+
+    .outline-text {
+      -webkit-text-stroke: 1px currentColor;
+      color: transparent;
+    }
+
+    /* =====================================================
+       MARQUEE
+    ====================================================== */
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* =====================================================
+       VIDEO CONTROLS
+    ====================================================== */
+
+    video {
+      display: block;
+    }
+
+    /* =====================================================
+       REDUCE MOTION
+    ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .marquee-track {
+        animation: none;
+      }
+    }
+    /* =====================================================
+   WHY ME — RESPONSIVE IMAGE
+====================================================== */
+
+.why-me-bg {
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  .why-me-bg {
+    background-position: 70% center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<header
+  id="main-header"
+  class="
+    fixed
+    top-0
+    left-0
+    right-0
+    z-50
+
+    bg-[#11100E]/40
+    backdrop-blur-sm
+
+    border-b
+    border-[#FEFFF0]/10
+
+    shadow-[0_4px_24px_rgba(0,0,0,0.12)]
+
+    px-5
+    md:px-10
+    py-5
+
+    text-[#FEFFF0]
+  "
+>
+
+  <nav
+    class="
+      relative
+      flex
+      items-center
+      justify-between
+    "
+  >
+
+    <!-- =================================================
+         LOGO
+    ================================================== -->
+
+    <a
+      href="#hero"
+      class="
+        text-sm
+        font-bold
+        tracking-tight
+        text-[#FEFFF0]
+        transition-opacity
+        duration-300
+        hover:opacity-70
+      "
+    >
+      DAVID RAMIREZ
+    </a>
+
+
+    <!-- =================================================
+         MENU DESKTOP
+    ================================================== -->
+
+    <div
+      class="
+        hidden
+        md:flex
+        items-center
+        gap-8
+        text-xs
+        font-medium
+        uppercase
+        tracking-widest
+      "
+    >
+
+      <a
+        href="#about"
+        class="
+          text-[#FEFFF0]
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Inicio
+      </a>
+
+
+      <a
+        href="#brands"
+        class="
+          text-[#FEFFF0]
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Marcas
+      </a>
+
+
+      <a
+        href="#results"
+        class="
+          text-[#FEFFF0]
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Resultados
+      </a>
+
+
+      <a
+        href="#contact"
+        class="
+          text-[#FEFFF0]
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Contacto
+      </a>
+
+    </div>
+
+
+    <!-- =================================================
+         BOTÓN HABLEMOS — DESKTOP
+    ================================================== -->
+
+    <a
+      href="#contact"
+      class="
+        hidden
+        md:inline-flex
+        items-center
+        border
+        border-[#FEFFF0]/70
+
+        rounded-full
+
+        px-4
+        py-2
+
+        text-xs
+        uppercase
+        tracking-widest
+
+        text-[#FEFFF0]
+
+        transition-all
+        duration-300
+
+        hover:bg-[#FEFFF0]
+        hover:text-[#11100E]
+        hover:border-[#FEFFF0]
+      "
+    >
+      Hablemos
+    </a>
+
+
+ <!-- =================================================
+     BOTÓN HAMBURGUESA — MOBILE
+================================================== -->
+
+<button
+  id="mobile-menu-button"
+  type="button"
+  aria-label="Abrir menú"
+  aria-expanded="false"
+  class="
+    md:hidden
+
+    absolute
+    right-5
+    top-1/2
+    -translate-y-1/2
+
+    flex
+    items-center
+    justify-center
+
+    w-6
+    h-6
+    p-0
+
+    text-[#FEFFF0]
+  "
+>
+
+  <span
+    id="menu-icon-open"
+    class="
+      text-xl
+      leading-none
+      font-light
+    "
+  >
+    ☰
+  </span>
+
+  <span
+    id="menu-icon-close"
+    class="
+      hidden
+      text-2xl
+      leading-none
+      font-light
+    "
+  >
+    ×
+  </span>
+
+</button>
+
+  </nav>
+
+
+ <!-- =================================================
+     MOBILE MENU
+================================================== -->
+
+<div
+  id="mobile-menu"
+  class="
+    md:hidden
+
+    absolute
+    left-0
+    right-0
+    top-full
+
+    h-[calc(100vh-73px)]
+
+    z-[9999]
+
+    bg-[#11100E]
+    text-[#FEFFF0]
+
+    opacity-0
+    invisible
+    pointer-events-none
+
+    transition-all
+    duration-300
+    ease-out
+  "
+>
+
+  <div
+    class="
+      flex
+      h-full
+      flex-col
+      justify-between
+
+      px-5
+      pt-10
+      pb-8
+
+      bg-[#11100E]
+    "
+  >
+
+    <!-- LINKS -->
+
+    <div
+      class="
+        flex
+        flex-col
+      "
+    >
+
+      <a
+        href="#about"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+          tracking-[-0.03em]
+
+          text-[#FEFFF0]
+
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Inicio
+      </a>
+
+
+      <a
+        href="#brands"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+          tracking-[-0.03em]
+
+          text-[#FEFFF0]
+
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Marcas
+      </a>
+
+
+      <a
+        href="#results"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+          tracking-[-0.03em]
+
+          text-[#FEFFF0]
+
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Resultados
+      </a>
+
+
+      <a
+        href="#contact"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+          tracking-[-0.03em]
+
+          text-[#FEFFF0]
+
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Contacto
+      </a>
+
+
+      <a
+        href="#contact"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+          tracking-[-0.03em]
+
+          text-[#FEFFF0]
+
+          transition-opacity
+          duration-300
+          hover:opacity-60
+        "
+      >
+        Hablemos
+      </a>
+
+    </div>
+    
+  </div>
+
+</div>
+      <div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE MENU SCRIPT
+====================================================== -->
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIconOpen = document.getElementById("menu-icon-open");
+  const menuIconClose = document.getElementById("menu-icon-close");
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+  function toggleMobileMenu() {
+    const isOpen =
+      mobileMenuButton.getAttribute("aria-expanded") === "true";
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      String(!isOpen)
+    );
+
+    if (!isOpen) {
+
+      mobileMenu.classList.remove(
+        "opacity-0",
+        "invisible",
+        "pointer-events-none"
+      );
+
+      mobileMenu.classList.add(
+        "opacity-100",
+        "visible",
+        "pointer-events-auto"
+      );
+
+      menuIconOpen.classList.add("hidden");
+      menuIconClose.classList.remove("hidden");
+
+      document.body.style.overflow = "hidden";
+
+    } else {
+
+      mobileMenu.classList.remove(
+        "opacity-100",
+        "visible",
+        "pointer-events-auto"
+      );
+
+      mobileMenu.classList.add(
+        "opacity-0",
+        "invisible",
+        "pointer-events-none"
+      );
+
+      menuIconOpen.classList.remove("hidden");
+      menuIconClose.classList.add("hidden");
+
+      document.body.style.overflow = "";
+    }
+  }
+
+
+  mobileMenuButton.addEventListener(
+    "click",
+    toggleMobileMenu
+  );
+
+
+  mobileMenuLinks.forEach((link) => {
+
+    link.addEventListener("click", () => {
+
+      mobileMenu.classList.remove(
+        "opacity-100",
+        "visible",
+        "pointer-events-auto"
+      );
+
+      mobileMenu.classList.add(
+        "opacity-0",
+        "invisible",
+        "pointer-events-none"
+      );
+
+      menuIconOpen.classList.remove("hidden");
+      menuIconClose.classList.add("hidden");
+
+      mobileMenuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      document.body.style.overflow = "";
+    });
+
+  });
+</script>
+  <!-- =====================================================
+       01 — HERO
+       Pantalla completa.
+  ====================================================== -->
+
+  <section
+    id="hero"
+    class="hero-image
+           relative
+           min-h-screen
+           w-full
+           flex
+           flex-col
+           justify-between
+           overflow-hidden
+           text-white"
+  >
+
+    <!-- Overlay -->
+
+    <div
+      class="absolute
+             inset-0
+             bg-gradient-to-r
+             from-black/55
+             via-black/15
+             to-black/10"
+    ></div>
+
+
+    <!-- Content -->
+
+    <div
+  class="relative
+         z-10
+         flex-1
+         flex
+         items-center
+         px-5
+         md:px-12
+         pt-28
+         md:pt-24
+         pb-12
+         md:pb-16"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="mb-5
+                 text-xs
+                 md:text-sm
+                 tracking-[0.35em]
+                 uppercase
+                 opacity-80"
+        >
+          Content Creator · UGC · IA
+        </p>
+
+
+        <h1
+  class="text-[clamp(3.5rem,16vw,10rem)]
+         md:text-[clamp(4rem,11vw,10rem)]
+         leading-[0.8]
+         font-bold
+         tracking-[-0.07em]"
+>
+          DAVID<br>
+          RAMIREZ
+        </h1>
+
+
+        <div class="mt-7 md:mt-8 max-w-xl">
+
+          <p
+            class="text-base
+       md:text-2xl
+       font-medium
+       leading-tight"
+          >
+            Conectando marcas con audiencias reales
+            a través de contenido, creatividad y estrategia.
+          </p>
+
+
+          <a
+            href="#visual-work"
+            class="inline-flex
+       mt-7
+       md:mt-8
+       items-center
+       gap-3
+       border
+       border-white/70
+       rounded-full
+       px-6
+       py-3
+       text-sm
+       uppercase
+       tracking-widest
+       hover:bg-white
+       hover:text-black
+       transition"
+          >
+            Ver mi trabajo
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Metadata -->
+
+    <div
+      class="relative
+       z-10
+       px-5
+       md:px-12
+       pb-5
+       md:pb-7
+       flex
+       justify-between
+       items-end"
+    >
+
+      <div
+        class="text-[10px]
+               md:text-xs
+               uppercase
+               tracking-[0.25em]
+               opacity-70"
+      >
+        Content Creator<br>
+        Marketing Digital
+      </div>
+
+
+      <div
+        class="text-[10px]
+               md:text-xs
+               uppercase
+               tracking-[0.25em]
+               opacity-70
+               text-right"
+      >
+        2026 — Buenos Aires<br>
+        Argentina
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       MARQUEE
+  ====================================================== -->
+
+  <div
+    class="bg-[#11100E]
+           text-[#FEFFF0]
+           py-4
+           marquee"
+  >
+
+    <div
+      class="marquee-track
+             text-sm
+             md:text-base
+             font-medium
+             tracking-[0.2em]
+             uppercase"
+    >
+
+      <span class="mx-8">
+        CONTENT CREATOR · UGC · AI CONTENT · MARKETING DIGITAL ·
+      </span>
+
+      <span class="mx-8">
+        CONTENT CREATOR · UGC · AI CONTENT · MARKETING DIGITAL ·
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       01 — SOBRE MÍ
+       Altura natural + imagen de fondo.
+  ====================================================== -->
+
+  <section
+    id="about"
+    class="relative
+           overflow-hidden
+           text-white"
+  >
+
+    <!-- Background -->
+
+    <div
+      class="absolute
+             inset-0
+             bg-cover
+             bg-center
+             scale-[1.02]"
+      style="background-image: url('./assets/editorial-about.png');"
+    ></div>
+
+
+    <!-- Dark overlay -->
+
+    <div
+      class="absolute
+             inset-0
+             bg-black/50"
+    ></div>
+
+
+    <!-- Gradient -->
+
+    <div
+      class="absolute
+             inset-0
+             bg-gradient-to-r
+             from-black/80
+             via-black/55
+             to-black/20"
+    ></div>
+
+
+    <!-- Content -->
+
+    <div
+      class="relative
+             z-10
+             px-6
+             md:px-12
+             py-24
+             md:py-32"
+    >
+
+      <!-- Header -->
+
+      <div
+        class="flex
+               items-center
+               justify-between"
+      >
+
+        <p
+          class="text-xs
+                 md:text-sm
+                 uppercase
+                 tracking-[0.3em]
+                 text-white/75"
+        >
+          01 — SOBRE MÍ
+        </p>
+
+
+        <p
+          class="hidden
+                 md:block
+                 text-xs
+                 uppercase
+                 tracking-[0.25em]
+                 text-white/45"
+        >
+          CONTENT · STRATEGY · STORYTELLING
+        </p>
+
+      </div>
+
+
+      <!-- Main -->
+
+      <div
+        class="mt-32
+               md:mt-40
+               max-w-6xl"
+      >
+
+        <h2
+          class="max-w-4xl
+                 text-5xl
+                 md:text-7xl
+                 lg:text-[6.2rem]
+                 leading-[0.88]
+                 tracking-[-0.06em]
+                 font-semibold"
+        >
+          Generar contenido
+          <br>
+          es contar
+          <span class="italic font-normal">
+            historias.
+          </span>
+        </h2>
+
+
+        <div
+          class="mt-12
+                 md:mt-16
+                 grid
+                 md:grid-cols-2
+                 gap-8
+                 md:gap-20
+                 max-w-5xl"
+        >
+
+          <p
+            class="text-base
+                   md:text-lg
+                   leading-relaxed
+                   text-white/85"
+          >
+            Soy David Ramirez, creador de contenido y profesional
+            del marketing digital. Trabajo en la intersección entre
+            creatividad, estrategia y cultura digital para ayudar
+            a las marcas a encontrar su voz y convertir lo que
+            tienen para decir en contenido que las personas quieran
+            mirar, recordar y compartir.
+          </p>
+
+
+          <p
+            class="text-base
+                   md:text-lg
+                   leading-relaxed
+                   text-white/85"
+          >
+            Porque una marca no necesita simplemente estar presente
+            en redes. Necesita tener algo que decir. Mi trabajo es
+            encontrar esa idea, construir su historia y transformarla
+            en contenido que conecte con personas reales.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Philosophy -->
+
+      <div
+        class="mt-24
+               md:mt-32
+               border-t
+               border-white/30
+               pt-6
+               grid
+               grid-cols-3
+               max-w-4xl"
+      >
+
+        <div>
+
+          <p
+            class="text-3xl
+                   md:text-5xl
+                   font-light
+                   italic"
+          >
+            01
+          </p>
+
+          <p
+            class="mt-2
+                   text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.25em]
+                   text-white/60"
+          >
+            Estrategia
+          </p>
+
+          <p
+            class="mt-2
+                   hidden
+                   md:block
+                   text-sm
+                   text-white/50"
+          >
+            Encontrar qué decir.
+          </p>
+
+        </div>
+
+
+        <div
+          class="border-l
+                 border-white/25
+                 pl-5
+                 md:pl-8"
+        >
+
+          <p
+            class="text-3xl
+                   md:text-5xl
+                   font-light
+                   italic"
+          >
+            02
+          </p>
+
+          <p
+            class="mt-2
+                   text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.25em]
+                   text-white/60"
+          >
+            Storytelling
+          </p>
+
+          <p
+            class="mt-2
+                   hidden
+                   md:block
+                   text-sm
+                   text-white/50"
+          >
+            Encontrar cómo contarlo.
+          </p>
+
+        </div>
+
+
+        <div
+          class="border-l
+                 border-white/25
+                 pl-5
+                 md:pl-8"
+        >
+
+          <p
+            class="text-3xl
+                   md:text-5xl
+                   font-light
+                   italic"
+          >
+            03
+          </p>
+
+          <p
+            class="mt-2
+                   text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.25em]
+                   text-white/60"
+          >
+            Contenido
+          </p>
+
+          <p
+            class="mt-2
+                   hidden
+                   md:block
+                   text-sm
+                   text-white/50"
+          >
+            Hacer que alguien quiera verlo.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+     02 — POR QUÉ YO
+     Altura natural controlada.
+====================================================== -->
+
+<section
+  id="why-me"
+  class="relative
+         min-h-[720px]
+         md:min-h-[760px]
+         overflow-hidden
+         bg-[#11100E]
+         text-[#FEFFF0]"
+>
+
+  <!-- Studio image -->
+
+  <div
+    class="absolute inset-0 bg-cover why-me-bg"
+    style="background-image: url('./assets/StudioLook.png');"
+  ></div>
+
+
+  <!-- Contrast -->
+
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/10"
+  ></div>
+
+
+  <!-- Mobile contrast -->
+
+  <div
+    class="absolute inset-0 hidden max-md:block bg-[#11100E]/35"
+  ></div>
+
+
+  <!-- Content -->
+
+  <div
+    class="relative
+           z-10
+           px-6
+           md:px-12
+           py-16
+           md:py-20"
+  >
+
+    <!-- Header -->
+
+    <div
+      class="reveal
+             flex
+             items-center
+             justify-between"
+    >
+
+      <p
+        class="text-[10px]
+               md:text-xs
+               uppercase
+               tracking-[0.3em]
+               text-white/70"
+      >
+        02 — POR QUE YO
+      </p>
+
+
+      <p
+        class="hidden
+               md:block
+               text-[10px]
+               uppercase
+               tracking-[0.3em]
+               text-white/55"
+      >
+        HUMANO · ESTRATEGIA · IA
+      </p>
+
+    </div>
+
+
+    <!-- Main copy -->
+
+    <div
+      class="mt-32
+             md:mt-[16vh]
+             max-w-[650px]"
+    >
+
+      <h2
+        class="reveal
+               text-5xl
+               md:text-7xl
+               lg:text-[6rem]
+               leading-[0.88]
+               tracking-[-0.06em]
+               font-semibold"
+      >
+        Experiencia desde el
+        <br>
+        <span class="italic font-normal">
+          aprendizaje.
+        </span>
+      </h2>
+
+
+      <p
+        class="reveal
+               mt-8
+               max-w-lg
+               text-base
+               md:text-lg
+               leading-relaxed
+               text-white/80"
+      >
+        Creando contenido hace más de 4 años, desarrollé
+        estrategias a través de la prueba y el error que
+        hoy fortalecen marcas de distintos rubros.
+        La Inteligencia Artificial también forma parte
+        de mi proceso, como una herramienta que complementa
+        y potencia mi trabajo.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MÉTRICAS
+     Independiente de Brands.
+====================================================== -->
+
+<section
+  id="portfolio-stats"
+  class="reveal
+         bg-[#11100E]
+         text-[#FEFFF0]
+         border-y
+         border-white/10"
+>
+
+  <div
+    class="max-w-[1400px]
+           mx-auto
+           px-6
+           md:px-12
+           py-10
+           md:py-12"
+  >
+
+    <div
+      class="grid
+             grid-cols-2
+             divide-x
+             divide-white/15"
+    >
+
+      <!-- +50 -->
+
+      <div
+        class="px-5
+               md:px-12
+               text-center
+               md:text-left"
+      >
+
+        <p
+          class="text-5xl
+                 md:text-7xl
+                 lg:text-[6rem]
+                 leading-none
+                 tracking-[-0.06em]
+                 font-medium"
+        >
+          +<span
+            class="stat-number"
+            data-target="50"
+          >0</span>
+        </p>
+
+
+        <p
+          class="mt-3
+                 text-[9px]
+                 md:text-xs
+                 uppercase
+                 tracking-[0.25em]
+                 text-white/50"
+        >
+          Proyectos realizados
+        </p>
+
+      </div>
+
+
+      <!-- +20 -->
+
+      <div
+        class="px-5
+               md:px-12
+               text-center
+               md:text-left"
+      >
+
+        <p
+          class="text-5xl
+                 md:text-7xl
+                 lg:text-[6rem]
+                 leading-none
+                 tracking-[-0.06em]
+                 font-medium"
+        >
+          +<span
+            class="stat-number"
+            data-target="20"
+          >0</span>
+        </p>
+
+
+        <p
+          class="mt-3
+                 text-[9px]
+                 md:text-xs
+                 uppercase
+                 tracking-[0.25em]
+                 text-white/50"
+        >
+          Clientes que confiaron en mí
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================
+       COUNTER
+  ================================================== -->
+
+  <script>
+    const statsSection = document.getElementById("portfolio-stats");
+    const statNumbers = document.querySelectorAll(".stat-number");
+
+    let statsAnimated = false;
+
+    function animateCounter(element) {
+      const target = Number(element.dataset.target);
+      const duration = 1400;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Suaviza el final del conteo
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        const currentValue = Math.floor(eased * target);
+
+        element.textContent = currentValue;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting && !statsAnimated) {
+
+            statsAnimated = true;
+
+            statNumbers.forEach((number) => {
+              animateCounter(number);
+            });
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.35
+      }
+    );
+
+
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+  </script>
+
+</section>
+
+
+<!-- =================================================
+     SCROLL REVEAL
+================================================== -->
+
+<script>
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("is-visible");
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+</script>
+  <!-- =====================================================
+       03 — BRANDS
+  ====================================================== -->
+
+  <section
+    id="brands"
+    class="bg-[#11100E] text-[#FEFFF0] px-6 md:px-12 py-16 md:py-20"
+  >
+
+    <div class="max-w-[1400px] mx-auto">
+
+      <!-- HEADER -->
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+        
+        <div>
+
+          <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#FEFFF0]/50">
+            03 — BRANDS
+          </p>
+
+          <h2 class="mt-10 text-5xl md:text-7xl lg:text-[7rem] leading-[0.84] tracking-[-0.07em] font-semibold">
+            Marcas con las
+            <br>
+            <span class="italic font-normal">que trabajé.</span>
+          </h2>
+
+        </div>
+
+        <p class="max-w-md text-base md:text-lg leading-relaxed text-[#FEFFF0]/50">
+          Colaboraciones, campañas y contenido creado para conectar productos
+          con personas reales.
+        </p>
+
+      </div>
+
+
+      <!-- LOGOS / INTERACTIVE GRID -->
+
+      <div class="mt-20 md:mt-28">
+
+        <div class="relative overflow-hidden">
+
+          <!-- IMAGEN BASE -->
+
+          <img
+            src="./assets/brands-grid.png"
+            alt="Marcas con las que trabajé"
+            class="block w-full h-auto"
+          >
+
+
+          <!-- 01 — McDonald's -->
+
+          <div class="absolute left-0 top-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                01
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                McDonald's
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 02 — MINISO -->
+
+          <div class="absolute left-1/4 top-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                02
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                MINISO
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 03 — TEMU -->
+
+          <div class="absolute left-1/2 top-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                03
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                TEMU
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 04 — GoCuotas -->
+
+          <div class="absolute right-0 top-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                04
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                GoCuotas
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 05 — Timeleft -->
+
+          <div class="absolute left-0 bottom-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                05
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                Timeleft
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 06 — Bross London -->
+
+          <div class="absolute left-1/4 bottom-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                06
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                Bross London
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 07 — Fragrancias Cannon -->
+
+          <div class="absolute left-1/2 bottom-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                07
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white text-center px-4">
+                Fragrancias Cannon
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- 08 — L'Oréal -->
+
+          <div class="absolute right-0 bottom-0 w-1/4 h-1/2 group cursor-default">
+
+            <div
+              class="absolute inset-0 bg-[#11100E]/0
+              group-hover:bg-[#11100E]/65
+              transition-all duration-500 ease-out"
+            ></div>
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center
+              opacity-0 translate-y-3
+              group-hover:opacity-100 group-hover:translate-y-0
+              transition-all duration-500 ease-out"
+            >
+
+              <span class="text-[10px] uppercase tracking-[0.3em] text-white/55">
+                08
+              </span>
+
+              <span class="mt-2 text-xl md:text-2xl font-medium tracking-[-0.03em] text-white">
+                L'Oréal
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER -->
+
+      <div class="mt-8 pt-6 border-t border-[#FEFFF0]/10 flex items-center justify-between">
+
+        <p class="text-[9px] md:text-[10px] uppercase tracking-[0.28em] text-[#FEFFF0]/30">
+          COLLABORATIONS · CAMPAIGNS · CONTENT
+        </p>
+
+        <p class="text-[9px] md:text-[10px] uppercase tracking-[0.28em] text-[#FEFFF0]/30">
+          08 BRANDS
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       04 — AI CONTENT
+  ====================================================== -->
+
+  <section
+    id="ai-content"
+    class="bg-[#11100E]
+           text-[#FEFFF0]"
+  >
+
+    <!-- ===================================================
+         04.01 — INTRO
+    ==================================================== -->
+
+    <div
+      class="px-6
+             md:px-12
+             pt-24
+             md:pt-32
+             pb-16
+             md:pb-20"
+    >
+
+      <div
+        class="max-w-[1400px]
+               mx-auto"
+      >
+
+        <!-- TOP -->
+
+        <div
+          class="flex
+                 items-center
+                 justify-between"
+        >
+
+          <p
+            class="text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.3em]
+                   text-[#FEFFF0]"
+          >
+            04 — AI CONTENT
+          </p>
+
+
+          <p
+            class="hidden
+                   md:block
+                   text-[10px]
+                   uppercase
+                   tracking-[0.3em]
+                   text-[#FEFFF0]/40"
+          >
+            DESARROLLO CREATIVO · IA
+          </p>
+
+        </div>
+
+
+        <!-- MAIN INTRO -->
+
+        <div
+          class="grid
+                 lg:grid-cols-12
+                 gap-12
+                 items-end
+                 mt-24
+                 mb-20"
+        >
+
+          <!-- TITLE -->
+
+          <div class="lg:col-span-8">
+
+            <h2
+              class="text-[4rem]
+                     md:text-[6.5rem]
+                     lg:text-[8rem]
+                     leading-[0.82]
+                     tracking-[-0.07em]
+                     font-semibold"
+            >
+              Tus productos
+              <br>
+              pueden estar
+              <br>
+              <span class="italic font-normal">
+                en todos lados.
+              </span>
+            </h2>
+
+          </div>
+
+
+          <!-- DESCRIPTION -->
+
+          <div
+            class="lg:col-span-4
+                   lg:pb-3"
+          >
+
+            <p
+              class="max-w-md
+                     text-base
+                     md:text-lg
+                     leading-relaxed
+                     text-[#FEFFF0]/70"
+            >
+              Desarrollo conceptos visuales utilizando
+              inteligencia artificial para llevar productos
+              a escenarios, campañas y mundos que antes
+              requerían grandes producciones.
+            </p>
+
+
+            <div
+              class="mt-8
+                     text-[10px]
+                     md:text-xs
+                     uppercase
+                     tracking-[0.2em]
+                     leading-loose
+                     text-[#FEFFF0]/45"
+            >
+              Desarrollo creativo
+              <br>
+              Generación de imágenes con IA
+              <br>
+              Dirección creativa
+              <br>
+              Contenido para redes sociales
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PURSE -->
+
+        <div class="w-full overflow-hidden">
+
+          <img
+            src="./assets/Purse.png"
+            alt="AI generated fashion campaign concept"
+            class="block
+                   w-full
+                   h-auto"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         04.02 — PROJECT CONCEPT
+    ==================================================== -->
+
+    <div
+      class="px-6
+             md:px-12
+             py-16
+             md:py-20"
+    >
+
+      <div
+        class="max-w-[1400px]
+               mx-auto"
+      >
+
+        <div
+          class="grid
+                 md:grid-cols-12
+                 gap-8
+                 items-end"
+        >
+
+          <!-- LABEL -->
+
+          <div class="md:col-span-3">
+
+            <p
+              class="text-[10px]
+                     md:text-xs
+                     uppercase
+                     tracking-[0.3em]
+                     text-[#FEFFF0]"
+            >
+              PROJECT / 01
+            </p>
+
+          </div>
+
+
+          <!-- TITLE -->
+
+          <div class="md:col-span-6">
+
+            <h3
+              class="text-4xl
+                     md:text-6xl
+                     lg:text-[5.5rem]
+                     leading-[0.86]
+                     tracking-[-0.07em]
+                     font-semibold"
+            >
+              A Memory
+              <br>
+              You Can
+              <br>
+              <span class="italic font-normal">
+                Carry On.
+              </span>
+            </h3>
+
+          </div>
+
+
+          <!-- DESCRIPTION -->
+
+          <div
+            class="md:col-span-3
+                   md:pb-1"
+          >
+
+            <p
+              class="max-w-sm
+                     text-sm
+                     md:text-base
+                     leading-relaxed
+                     text-[#FEFFF0]/55"
+            >
+              Un ejercicio conceptual para explorar
+              cómo una misma idea puede convertirse
+              en un universo visual completo alrededor
+              de un producto.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONCEPT IMAGE -->
+
+        <div
+          class="mt-12
+                 md:mt-16
+                 w-full
+                 overflow-hidden"
+        >
+
+          <img
+            src="./assets/Concept.png"
+            alt="A Memory You Can Carry On — AI content concept"
+            class="block
+                   w-full
+                   h-auto"
+          >
+
+        </div>
+
+
+        <!-- CAPTION -->
+
+        <div
+          class="mt-4
+                 flex
+                 items-center
+                 justify-between"
+        >
+
+          <p
+            class="text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            CONCEPT DEVELOPMENT
+          </p>
+
+
+          <p
+            class="hidden
+                   md:block
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/35"
+          >
+            AI CONTENT / 01
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+<!-- ===================================================
+     04.03 — WORKFLOW
+==================================================== -->
+
+<div
+  class="px-6
+         md:px-12
+         py-24
+         md:py-32"
+>
+
+  <div
+    class="max-w-[1400px]
+           mx-auto"
+  >
+
+    <!-- HEADER -->
+
+    <div
+      class="grid
+             lg:grid-cols-12
+             gap-10
+             items-end"
+    >
+
+      <div class="lg:col-span-8">
+
+        <p
+          class="text-[10px]
+                 md:text-xs
+                 uppercase
+                 tracking-[0.3em]
+                 text-[#FEFFF0]"
+        >
+          THE WORKFLOW
+        </p>
+
+
+        <h3
+          class="mt-6
+                 text-5xl
+                 md:text-7xl
+                 lg:text-[7rem]
+                 leading-[0.84]
+                 tracking-[-0.07em]
+                 font-semibold"
+        >
+          Del brief
+          <br>
+          <span class="italic font-normal">
+            al contenido.
+          </span>
+        </h3>
+
+      </div>
+
+
+      <div
+        class="lg:col-span-4
+               lg:pb-2"
+      >
+
+        <p
+          class="max-w-sm
+                 text-sm
+                 md:text-base
+                 leading-relaxed
+                 text-[#FEFFF0]/55"
+        >
+          Un flujo de trabajo que transforma una
+          necesidad de comunicación en un sistema
+          de contenido listo para cada punto de contacto.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- WORKFLOW -->
+
+    <div
+      class="relative
+             mt-20
+             md:mt-28"
+    >
+
+      <!-- Vertical line mobile -->
+
+      <div
+        class="absolute
+               left-[7px]
+               top-[7px]
+               bottom-0
+               z-0
+               w-px
+               bg-[#FEFFF0]/20
+               md:hidden"
+      ></div>
+
+
+      <!-- Horizontal line desktop -->
+
+      <div
+        class="absolute
+               left-0
+               right-0
+               top-[7px]
+               z-0
+               hidden
+               md:block
+               h-px
+               bg-[#FEFFF0]/20"
+      ></div>
+
+
+      <div
+        class="grid
+               gap-16
+               md:grid-cols-6
+               md:gap-0"
+      >
+
+        <!-- 01 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:pr-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            01
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Brief
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Entender el producto, el objetivo,
+            la audiencia y qué queremos provocar.
+          </p>
+
+        </div>
+
+
+        <!-- 02 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:px-4
+                 lg:px-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            02
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Idea
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Encontrar un concepto creativo capaz
+            de sostener todo el universo visual.
+          </p>
+
+        </div>
+
+
+        <!-- 03 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:px-4
+                 lg:px-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            03
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Creación
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Construir escenarios, personajes,
+            producto y recursos visuales.
+          </p>
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:px-4
+                 lg:px-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            04
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Curaduría
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Seleccionar, refinar y mantener una
+            identidad visual consistente.
+          </p>
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:px-4
+                 lg:px-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            05
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Adaptación
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Llevar el concepto a diferentes formatos,
+            plataformas y puntos de contacto.
+          </p>
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div
+          class="relative
+                 pl-10
+                 md:pl-0
+                 md:pl-4
+                 lg:pl-8"
+        >
+
+          <div
+            class="absolute
+                   left-0
+                   top-0
+                   z-20
+                   w-[15px]
+                   h-[15px]
+                   rounded-full
+                   bg-[#FEFFF0]
+                   border-[4px]
+                   border-[#11100E]"
+          ></div>
+
+
+          <p
+            class="mt-7
+                   text-[10px]
+                   uppercase
+                   tracking-[0.25em]
+                   text-[#FEFFF0]/40"
+          >
+            06
+          </p>
+
+
+          <h4
+            class="mt-6
+                   text-2xl
+                   md:text-[1.55rem]
+                   tracking-[-0.04em]"
+          >
+            Contenido
+          </h4>
+
+
+          <p
+            class="mt-4
+                   text-sm
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            Convertir el trabajo creativo en piezas
+            listas para comunicar y publicar.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- WORKFLOW FOOTER -->
+
+    <div></div>
+
+  </div>
+
+</div>
+
+    <!-- ===================================================
+         04.04 — AI AS A CREATIVE TOOL
+    ==================================================== -->
+
+    <section
+      class="bg-[#11100E]
+             text-[#FEFFF0]
+             px-6
+             md:px-12
+             py-16
+             md:py-20"
+    >
+
+      <div
+        class="max-w-[1400px]
+               mx-auto"
+      >
+
+        <!-- MAIN STATEMENT -->
+
+        <div
+          class="max-w-[1150px]"
+        >
+
+          <h3
+            class="text-5xl
+                   md:text-7xl
+                   lg:text-[7.2rem]
+                   leading-[0.84]
+                   tracking-[-0.07em]
+                   font-semibold"
+          >
+            La IA no reemplaza
+            <br>
+            <span class="italic font-normal">
+              la idea.
+            </span>
+          </h3>
+
+        </div>
+
+
+        <!-- SECOND STATEMENT -->
+
+        <div
+          class="mt-20
+                 md:mt-24
+                 ml-auto
+                 max-w-[650px]"
+        >
+
+          <h4
+            class="text-4xl
+                   md:text-6xl
+                   lg:text-[4.5rem]
+                   leading-[0.9]
+                   tracking-[-0.06em]
+                   font-medium"
+          >
+            La amplía.
+          </h4>
+
+
+          <p
+            class="mt-7
+                   max-w-xl
+                   text-base
+                   md:text-lg
+                   leading-relaxed
+                   text-[#FEFFF0]/55"
+          >
+            La utilizo para explorar posibilidades,
+            acelerar procesos y llevar una idea más lejos.
+            No se trata de generar por generar, sino de
+            encontrar nuevas formas de convertir una visión
+            en contenido.
+          </p>
+
+        </div>
+
+
+        <!-- AI TOOLS -->
+
+        <div
+          class="mt-20
+                 md:mt-28
+                 pt-8
+                 border-t
+                 border-[#FEFFF0]/15"
+        >
+
+          <div>
+
+            <p
+              class="text-[10px]
+                     md:text-xs
+                     uppercase
+                     tracking-[0.3em]
+                     text-[#FEFFF0]"
+            >
+              IA'S QUE USO
+            </p>
+
+
+            <p
+              class="mt-3
+                     text-sm
+                     md:text-base
+                     text-[#FEFFF0]/50"
+            >
+              Herramientas que forman parte de mi proceso creativo.
+            </p>
+
+          </div>
+
+
+          <!-- Transparent AI logos -->
+
+          <div
+            class="mt-6
+                   w-full
+                   overflow-hidden
+                   border
+                   border-[#FEFFF0]/15"
+          >
+
+            <div class="bg-[#FEFFF0]">
+  <img
+    src="./assets/ai-tools-grid.png"
+    alt="IA's que uso: Claude, Gemini, HeyGen, ElevenLabs y ChatGPT"
+    class="block w-full h-auto"
+  >
+</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+      <!-- =====================================================
+       05 — VISUAL WORK
+  ====================================================== -->
+
+  <section
+    id="visual-work"
+    class="bg-[#11100E]
+           text-[#FEFFF0]
+           px-6
+           md:px-12
+           py-16
+           md:py-20"
+  >
+
+    <div class="max-w-[1400px] mx-auto">
+
+      <!-- HEADER -->
+
+      <div
+        class="grid
+               md:grid-cols-12
+               gap-10
+               items-end"
+      >
+
+        <div class="md:col-span-8">
+
+          <p
+            class="text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.3em]
+                   text-white/50"
+          >
+            05 — VISUAL WORK
+          </p>
+
+
+          <h2
+            class="mt-8
+                   text-5xl
+                   md:text-7xl
+                   lg:text-[7rem]
+                   leading-[0.84]
+                   tracking-[-0.07em]
+                   font-semibold"
+          >
+            Trabajos
+            <br>
+            <span class="italic font-normal">
+              Realizados
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="md:col-span-4 md:pb-2">
+
+          <p
+            class="max-w-sm
+                   text-sm
+                   md:text-base
+                   leading-relaxed
+                   text-white/55"
+          >
+            Una selección de campañas, UGC y contenido
+            desarrollado para marcas, productos y
+            comunidades digitales.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           VIDEO GRID
+      ================================================== -->
+
+      <div
+        class="mt-20
+               md:mt-28
+               grid
+               md:grid-cols-2
+               gap-5
+               md:gap-8"
+      >
+
+        <!-- ===============================================
+             VIDEO 01
+        ================================================ -->
+
+        <article>
+
+          <div
+            class="relative
+                   overflow-hidden
+                   bg-black
+                   aspect-[9/16]"
+          >
+
+            <video
+              class="w-full
+                     h-full
+                     object-cover"
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://res.cloudinary.com/a2f4kkls/video/upload/so_0/gemini_generated_video_7bea73e0.jpg"
+            >
+
+              <source
+                src="https://res.cloudinary.com/a2f4kkls/video/upload/gemini_generated_video_7bea73e0.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
+
+          </div>
+
+
+          <div
+            class="mt-4
+                   flex
+                   items-start
+                   justify-between
+                   gap-6"
+          >
+
+            <div>
+
+              <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-white/40"
+              >
+                01
+              </p>
+
+
+              <h3
+                class="mt-2
+                       text-lg
+                       md:text-xl
+                       tracking-[-0.03em]"
+              >
+                A Memory you can Carry on
+              </h3>
+
+            </div>
+
+
+            <p
+              class="pt-1
+                     text-[10px]
+                     uppercase
+                     tracking-[0.2em]
+                     text-white/40
+                     text-right"
+            >
+              AI CONTENT
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ===============================================
+             VIDEO 02
+        ================================================ -->
+
+        <article>
+
+          <div
+            class="relative
+                   overflow-hidden
+                   bg-black
+                   aspect-[9/16]"
+          >
+
+            <video
+              class="w-full
+                     h-full
+                     object-cover"
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://res.cloudinary.com/a2f4kkls/video/upload/so_0/copy_692804E4-3861-4E4C-9FCE-922D15665320.jpg"
+            >
+
+              <source
+                src="https://res.cloudinary.com/a2f4kkls/video/upload/copy_692804E4-3861-4E4C-9FCE-922D15665320.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
+
+          </div>
+
+
+          <div
+            class="mt-4
+                   flex
+                   items-start
+                   justify-between
+                   gap-6"
+          >
+
+            <div>
+
+              <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-white/40"
+              >
+                02
+              </p>
+
+
+              <h3
+                class="mt-2
+                       text-lg
+                       md:text-xl
+                       tracking-[-0.03em]"
+              >
+                Tiktok Ads Manager
+              </h3>
+
+            </div>
+
+
+            <p
+              class="pt-1
+                     text-[10px]
+                     uppercase
+                     tracking-[0.2em]
+                     text-white/40
+                     text-right"
+            >
+              UGC
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ===============================================
+             VIDEO 03
+        ================================================ -->
+
+        <article>
+
+          <div
+            class="relative
+                   overflow-hidden
+                   bg-black
+                   aspect-[9/16]"
+          >
+
+            <video
+              class="w-full
+                     h-full
+                     object-cover"
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://res.cloudinary.com/a2f4kkls/video/upload/so_0/copy_E7F262F7-7FAE-4BB9-ADF7-636D34D91672.jpg"
+            >
+
+              <source
+                src="https://res.cloudinary.com/a2f4kkls/video/upload/copy_E7F262F7-7FAE-4BB9-ADF7-636D34D91672.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
+
+          </div>
+
+
+          <div
+            class="mt-4
+                   flex
+                   items-start
+                   justify-between
+                   gap-6"
+          >
+
+            <div>
+
+              <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-white/40"
+              >
+                03
+              </p>
+
+
+              <h3
+                class="mt-2
+                       text-lg
+                       md:text-xl
+                       tracking-[-0.03em]"
+              >
+                Emperrate.arg
+              </h3>
+
+            </div>
+
+
+            <p
+              class="pt-1
+                     text-[10px]
+                     uppercase
+                     tracking-[0.2em]
+                     text-white/40
+                     text-right"
+            >
+              Campaña Foodie
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ===============================================
+             VIDEO 04
+        ================================================ -->
+
+        <article>
+
+          <div
+            class="relative
+                   overflow-hidden
+                   bg-black
+                   aspect-[9/16]"
+          >
+
+            <video
+              class="w-full
+                     h-full
+                     object-cover"
+              controls
+              playsinline
+              preload="metadata"
+              poster="https://res.cloudinary.com/a2f4kkls/video/upload/so_0/TREMEDA_ESTA_FERIA_LA_MAS_GRANDE_DE_TODO_ZONA_NORTE_Visite_feria_rotonda_y_no_podia_creer_l.jpg"
+            >
+
+              <source
+                src="https://res.cloudinary.com/a2f4kkls/video/upload/TREMEDA_ESTA_FERIA_LA_MAS_GRANDE_DE_TODO_ZONA_NORTE_Visite_feria_rotonda_y_no_podia_creer_l.mp4"
+                type="video/mp4"
+              >
+
+              Tu navegador no puede reproducir este video.
+
+            </video>
+
+          </div>
+
+
+          <div
+            class="mt-4
+                   flex
+                   items-start
+                   justify-between
+                   gap-6"
+          >
+
+            <div>
+
+              <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-white/40"
+              >
+                04
+              </p>
+
+
+              <h3
+                class="mt-2
+                       text-lg
+                       md:text-xl
+                       tracking-[-0.03em]"
+              >
+                Red de ferias
+              </h3>
+
+            </div>
+
+
+            <p
+              class="pt-1
+                     text-[10px]
+                     uppercase
+                     tracking-[0.2em]
+                     text-white/40
+                     text-right"
+            >
+              BLOG 
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+<!-- 06 — RESULTS -->
+<section id="results" class="bg-[#11100E] text-[#FEFFF0] overflow-hidden">
+
+  <!-- BLOQUE 1 — INTRO + DOS TELÉFONOS -->
+  <div class="px-6 md:px-12 lg:px-16 pt-24 md:pt-32 pb-20 md:pb-28">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-center">
+
+        <!-- Título -->
+        <div>
+
+          <p class="text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#FEFFF0]/70 mb-5 md:mb-7">
+            06 — RESULTADOS
+          </p>
+
+          <h2 class="text-5xl lg:text-[5.3rem] leading-[0.88] tracking-[-0.07em] font-semibold text-[#FEFFF0]">
+            Las ideas<br>
+            buenas traen<br>
+            resultados<br>
+            <span class="italic font-normal">excelentes.</span>
+          </h2>
+
+        </div>
+
+        <!-- Dos teléfonos -->
+        <div class="flex justify-center">
+
+          <img
+            src="./assets/mockup-redes-deivlogss.png"
+            alt="Perfiles de Deivlogss en redes sociales"
+            class="block w-full md:w-[96%] lg:w-full h-auto"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BLOQUE 2 — PERFIL + TEXTO -->
+<div class="px-6 md:px-12 lg:px-16 py-20 md:py-28">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="grid grid-cols-[1fr_42%] md:grid-cols-2 gap-5 md:gap-20 items-center">
+
+      <!-- TITULO -->
+      <div class="md:col-start-1 md:row-start-1">
+        <p class="text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#FEFFF0]/50 mb-5">
+          UNA IDENTIDAD
+        </p>
+
+        <h3 class="text-3xl md:text-4xl lg:text-5xl leading-[0.95] tracking-[-0.04em] font-semibold">
+          Una comunidad construida alrededor de una idea.
+        </h3>
+      </div>
+
+      <!-- MOCKUP -->
+      <div class="flex justify-center md:justify-end md:row-span-2 md:col-start-2">
+        <img src="./assets/mockup-perfil-deivlogss.png"
+             alt="Perfil de Instagram de Deivlogss"
+             class="block w-[115%] md:w-[105%] lg:w-[100%] max-w-none h-auto">
+      </div>
+
+      <!-- CUERPO -->
+      <div class="col-span-2 md:col-span-1 md:col-start-1">
+        <p class="text-sm md:text-base leading-relaxed text-[#FEFFF0]/65">
+          El contenido funciona cuando las personas pueden reconocer algo propio en él. En mi caso, la idea de ser ese amigo que siempre encuentra las gangas se convirtió en una identidad que atraviesa cada publicación.
+        </p>
+
+        <p class="mt-5 text-sm md:text-base leading-relaxed text-[#FEFFF0]/65">
+          No se trata solamente de publicar. Se trata de construir una personalidad, una estética y una forma de comunicar que las personas puedan reconocer incluso antes de ver quién publicó el contenido.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <!-- BLOQUE 3 — ESTADÍSTICAS + TEXTO -->
+  <div class="px-6 md:px-12 lg:px-16 pt-16 md:pt-24 pb-28 md:pb-40">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid grid-cols-1 lg:grid-cols-[0.65fr_1.8fr_0.65fr] gap-10 lg:gap-10 items-center">
+
+        <!-- Texto izquierda -->
+        <div class="max-w-sm">
+
+          <p class="text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#FEFFF0]/50 mb-5">
+            ALCANCE
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[0.95] tracking-[-0.04em] font-semibold">
+            El contenido encuentra a personas que todavía no te conocen.
+          </h3>
+
+          <p class="mt-6 text-sm md:text-base leading-relaxed text-[#FEFFF0]/65">
+            Una gran parte del crecimiento ocurre fuera de la comunidad existente. Las recomendaciones, los Reels y el contenido compartible permiten que una idea viaje mucho más allá de los seguidores.
+          </p>
+
+        </div>
+
+
+        <!-- Estadísticas -->
+        <div class="flex justify-center">
+
+          <img
+            src="./assets/mockup-estadisticas-deivlogss.png"
+            alt="Estadísticas de alcance y actividad de Deivlogss"
+            class="block w-full md:w-[105%] lg:w-[115%] max-w-none h-auto"
+          >
+
+        </div>
+
+
+        <!-- Texto derecha -->
+        <div class="max-w-sm">
+
+          <p class="text-[10px] md:text-xs tracking-[0.22em] uppercase text-[#FEFFF0]/50 mb-5">
+            RESULTADOS
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[0.95] tracking-[-0.04em] font-semibold">
+            Las métricas muestran lo que sucede después.
+          </h3>
+
+          <p class="mt-6 text-sm md:text-base leading-relaxed text-[#FEFFF0]/65">
+            Visualizaciones, alcance, visitas al perfil e interacciones convierten una idea creativa en datos concretos. Y esos datos permiten entender qué funciona y qué puede hacerse mejor.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+ <!-- =====================================================
+     07 — TESTIMONIOS
+====================================================== -->
+
+<section
+  id="testimonials"
+  class="bg-[#11100E]
+         text-[#FEFFF0]
+         px-6
+         md:px-12
+         py-16
+         md:py-20"
+>
+
+  <div
+    class="max-w-[1400px]
+           mx-auto"
+  >
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <div
+      class="max-w-[1000px]"
+    >
+
+      <p
+        class="text-[10px]
+               md:text-xs
+               uppercase
+               tracking-[0.3em]
+               text-[#FEFFF0]"
+      >
+        07 — TESTIMONIOS
+      </p>
+
+
+      <h2
+        class="mt-10
+               text-5xl
+               md:text-7xl
+               lg:text-[7rem]
+               leading-[0.84]
+               tracking-[-0.07em]
+               font-semibold"
+      >
+        Lo que dicen quienes
+        <br>
+        <span class="italic font-normal">
+          trabajaron conmigo.
+        </span>
+      </h2>
+
+
+      <p
+        class="mt-10
+               max-w-xl
+               text-base
+               md:text-lg
+               leading-relaxed
+               text-[#FEFFF0]/55"
+      >
+        El resultado de un proyecto también está
+        en la experiencia de trabajar juntos.
+        Estas son algunas de las marcas que confiaron
+        en mi trabajo.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         LISTADO DE RESEÑAS
+    ================================================== -->
+
+    <div
+      class="mt-12
+             md:mt-16"
+    >
+
+
+      <!-- =================================================
+           01 — YANKYLANDIA
+      ================================================== -->
+
+      <article
+        class="border-t
+               border-[#FEFFF0]/15
+               pt-6
+               pb-10
+               md:pb-12"
+      >
+
+        <!-- REVIEW HEADER -->
+
+        <div
+          class="grid
+                 grid-cols-12
+                 gap-4
+                 items-start"
+        >
+
+          <!-- NUMBER -->
+
+          <div
+            class="col-span-2
+                   md:col-span-1"
+          >
+
+            <p
+              class="text-sm
+                     md:text-base
+                     font-medium
+                     tracking-[-0.02em]"
+            >
+              01
+            </p>
+
+          </div>
+
+
+          <!-- NAME -->
+
+          <div
+            class="col-span-7
+                   md:col-span-8"
+          >
+
+            <h3
+              class="text-xl
+                     md:text-2xl
+                     lg:text-3xl
+                     font-medium
+                     tracking-[-0.04em]"
+            >
+              La Market Feria / New Moda Baires
+            </h3>
+
+          </div>
+
+
+          <!-- TYPE -->
+
+          <div
+            class="col-span-3
+                   md:col-span-3
+                   text-right"
+          >
+
+            <p
+              class="text-[9px]
+                     md:text-[10px]
+                     uppercase
+                     tracking-[0.25em]
+                     text-[#FEFFF0]/40"
+            >
+              Reseña / Google
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div
+          class="mt-5
+                 md:mt-6
+                 overflow-hidden"
+        >
+
+          <img
+            src="./assets/resena1.jpeg"
+            alt="Reseña de Yankylandia sobre el trabajo de David Ramirez"
+            class="block
+                   w-full
+                   h-auto"
+          >
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           02 — LA MARKET FERIA
+      ================================================== -->
+
+      <article
+        class="border-t
+               border-[#FEFFF0]/15
+               pt-6
+               pb-10
+               md:pb-12"
+      >
+
+        <!-- REVIEW HEADER -->
+
+        <div
+          class="grid
+                 grid-cols-12
+                 gap-4
+                 items-start"
+        >
+
+          <!-- NUMBER -->
+
+          <div
+            class="col-span-2
+                   md:col-span-1"
+          >
+
+            <p
+              class="text-sm
+                     md:text-base
+                     font-medium
+                     tracking-[-0.02em]"
+            >
+              02
+            </p>
+
+          </div>
+
+
+          <!-- NAME -->
+
+          <div
+            class="col-span-7
+                   md:col-span-8"
+          >
+
+            <h3
+              class="text-xl
+                     md:text-2xl
+                     lg:text-3xl
+                     font-medium
+                     tracking-[-0.04em]"
+            >
+              Remates Zona Sur / La Gran Barata Conurbano
+            </h3>
+
+          </div>
+
+
+          <!-- TYPE -->
+
+          <div
+            class="col-span-3
+                   md:col-span-3
+                   text-right"
+          >
+
+            <p
+              class="text-[9px]
+                     md:text-[10px]
+                     uppercase
+                     tracking-[0.25em]
+                     text-[#FEFFF0]/40"
+            >
+              Reseña / Google
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div
+          class="mt-5
+                 md:mt-6
+                 overflow-hidden"
+        >
+
+          <img
+            src="./assets/resena2.jpeg"
+            alt="Reseña de La Market Feria sobre el trabajo de David Ramirez"
+            class="block
+                   w-full
+                   h-auto"
+          >
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =================================================
+           03 — NEW MODA BAIRES
+      ================================================== -->
+
+      <article
+        class="border-t
+               border-[#FEFFF0]/15
+               pt-6
+               pb-10
+               md:pb-12"
+      >
+
+        <!-- REVIEW HEADER -->
+
+        <div
+          class="grid
+                 grid-cols-12
+                 gap-4
+                 items-start"
+        >
+
+          <!-- NUMBER -->
+
+          <div
+            class="col-span-2
+                   md:col-span-1"
+          >
+
+            <p
+              class="text-sm
+                     md:text-base
+                     font-medium
+                     tracking-[-0.02em]"
+            >
+              03
+            </p>
+
+          </div>
+
+
+          <!-- NAME -->
+
+          <div
+            class="col-span-7
+                   md:col-span-8"
+          >
+
+            <h3
+              class="text-xl
+                     md:text-2xl
+                     lg:text-3xl
+                     font-medium
+                     tracking-[-0.04em]"
+            >
+              Yankylandia
+            </h3>
+
+          </div>
+
+
+          <!-- TYPE -->
+
+          <div
+            class="col-span-3
+                   md:col-span-3
+                   text-right"
+          >
+
+            <p
+              class="text-[9px]
+                     md:text-[10px]
+                     uppercase
+                     tracking-[0.25em]
+                     text-[#FEFFF0]/40"
+            >
+              Reseña / Google
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div
+          class="mt-5
+                 md:mt-6
+                 overflow-hidden"
+        >
+
+          <img
+            src="./assets/resena3.jpeg"
+            alt="Reseña de New Moda Baires sobre el trabajo de David Ramirez"
+            class="block
+                   w-full
+                   h-auto"
+          >
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- =====================================================
+       08 — CONTACTO
+  ====================================================== -->
+
+  <section
+    id="contact"
+    class="relative overflow-hidden bg-[#11100E] text-[#FEFFF0]"
+  >
+
+    <!-- =====================================================
+         FOTO DE FONDO
+         ===================================================== -->
+
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('./assets/foto.png');"
+    ></div>
+
+
+    <!-- =====================================================
+         OVERLAY
+         Oscurece la foto para que el texto claro sea legible
+         ===================================================== -->
+
+    <div class="absolute inset-0 bg-[#11100E]/55"></div>
+
+
+    <!-- =====================================================
+         CONTENIDO
+         ===================================================== -->
+
+    <div
+      class="relative z-10 px-6 md:px-12 py-16 md:py-20 flex flex-col"
+    >
+
+
+      <!-- ===================================================
+           HEADER DE LA SECCIÓN
+           =================================================== -->
+
+      <div class="flex items-center justify-between">
+
+        <p
+          class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#FEFFF0]/70"
+        >
+          08 — CONTACTO
+        </p>
+
+        <p
+          class="hidden md:block text-[10px] uppercase tracking-[0.3em] text-[#FEFFF0]/50"
+        >
+          BUENOS AIRES · ARGENTINA
+        </p>
+
+      </div>
+
+
+      <!-- ===================================================
+           CONTENIDO PRINCIPAL
+           =================================================== -->
+
+      <div
+        class="flex-1 flex flex-col items-center justify-center text-center py-20"
+      >
+
+        <!-- TITULO -->
+
+        <h2
+          class="text-[clamp(4.5rem,13vw,11rem)] leading-[0.78] tracking-[-0.08em] font-semibold text-[#FEFFF0]"
+        >
+          Creemos
+          <br>
+          <span class="italic font-normal">
+            juntos.
+          </span>
+        </h2>
+
+
+        <!-- DESCRIPCIÓN -->
+
+        <p
+          class="mt-10 max-w-xl text-base md:text-lg leading-relaxed text-[#FEFFF0]/75"
+        >
+          Si tenés una marca, un producto o una idea que necesita convertirse
+          en contenido, hablemos.
+        </p>
+
+      </div>
+
+
+      <!-- ===================================================
+           BOTONES DE CONTACTO
+           =================================================== -->
+
+      <div
+        class="border-t border-[#FEFFF0]/20 pt-6 md:pt-8"
+      >
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5"
+        >
+
+
+          <!-- ===============================================
+               INSTAGRAM
+               =============================================== -->
+
+          <a
+            href="https://www.instagram.com/deivlogss/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-full border border-[#FEFFF0]/45 bg-[#11100E]/30 backdrop-blur-sm px-6 py-4 md:py-5 flex items-center justify-between transition-all duration-300 hover:bg-[#FEFFF0] hover:text-[#11100E] hover:border-[#FEFFF0]"
+          >
+
+            <div class="text-left">
+
+              <p
+                class="text-[9px] uppercase tracking-[0.25em] text-[#FEFFF0]/55 group-hover:text-[#11100E]/50"
+              >
+                Instagram
+              </p>
+
+              <p
+                class="mt-1 text-sm md:text-base font-medium"
+              >
+                @deivlogss
+              </p>
+
+            </div>
+
+            <span
+              aria-hidden="true"
+              class="text-xl leading-none transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+
+          <!-- ===============================================
+               WHATSAPP
+               =============================================== -->
+
+          <a
+            href="https://wa.me/541168047499"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-full border border-[#FEFFF0]/45 bg-[#11100E]/30 backdrop-blur-sm px-6 py-4 md:py-5 flex items-center justify-between transition-all duration-300 hover:bg-[#FEFFF0] hover:text-[#11100E] hover:border-[#FEFFF0]"
+          >
+
+            <div class="text-left">
+
+              <p
+                class="text-[9px] uppercase tracking-[0.25em] text-[#FEFFF0]/55 group-hover:text-[#11100E]/50"
+              >
+                WhatsApp
+              </p>
+
+              <p
+                class="mt-1 text-sm md:text-base font-medium"
+              >
+                +54 11 6804 7499
+              </p>
+
+            </div>
+
+            <span
+              aria-hidden="true"
+              class="text-xl leading-none transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+
+          <!-- ===============================================
+               EMAIL
+               =============================================== -->
+
+          <a
+            href="mailto:drmarketingar@gmail.com"
+            class="group rounded-full border border-[#FEFFF0]/45 bg-[#11100E]/30 backdrop-blur-sm px-6 py-4 md:py-5 flex items-center justify-between transition-all duration-300 hover:bg-[#FEFFF0] hover:text-[#11100E] hover:border-[#FEFFF0]"
+          >
+
+            <div class="text-left min-w-0">
+
+              <p
+                class="text-[9px] uppercase tracking-[0.25em] text-[#FEFFF0]/55 group-hover:text-[#11100E]/50"
+              >
+                Email
+              </p>
+
+              <p
+                class="mt-1 text-sm md:text-base font-medium truncate"
+              >
+                drmarketingar@gmail.com
+              </p>
+
+            </div>
+
+            <span
+              aria-hidden="true"
+              class="text-xl leading-none ml-4 transition-transform duration-300 group-hover:translate-x-1"
+            >
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <div
+          class="mt-6 md:mt-7 pt-5 border-t border-[#FEFFF0]/15 flex items-center justify-between"
+        >
+
+          <p
+            class="text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-[#FEFFF0]/40"
+          >
+            DAVID RAMIREZ · CONTENT CREATOR · MARKETING DIGITAL
+          </p>
+
+          <p
+            class="text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-[#FEFFF0]/40"
+          >
+            2026
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <script>
+  /* =====================================================
+     GLOBAL SCROLL-LINKED TEXT ANIMATION
+  ====================================================== */
+
+  const globalRevealElements =
+  document.querySelectorAll(
+    "section h1, section h2, section h3, section h4, section p"
+  );
+
+
+  function updateRevealAnimations() {
+
+    const viewportHeight = window.innerHeight;
+
+
+    globalRevealElements.forEach((element) => {
+
+      const rect =
+        element.getBoundingClientRect();
+
+
+      /*
+        El elemento empieza a reaccionar
+        antes de entrar completamente
+        al viewport.
+      */
+
+      const start =
+        viewportHeight * 1.05;
+
+
+      /*
+        La animación termina cuando el elemento
+        llega aproximadamente a esta altura.
+      */
+
+      const end =
+        viewportHeight * 0.65;
+
+
+      let progress =
+        (start - rect.top) /
+        (start - end);
+
+
+      progress =
+        Math.max(
+          0,
+          Math.min(1, progress)
+        );
+
+
+      /*
+        Suavizado
+      */
+
+      const eased =
+        1 - Math.pow(1 - progress, 2);
+
+
+      /*
+        Movimiento vertical
+      */
+
+      const y =
+        24 * (1 - eased);
+
+
+      /*
+        Opacidad
+
+        Nunca desaparece completamente.
+      */
+
+      const opacity =
+        0.35 + (0.65 * eased);
+
+
+      element.style.transform =
+        `translateY(${y}px)`;
+
+
+      element.style.opacity =
+        opacity;
+
+    });
+
+  }
+
+
+  let animationFrame = null;
+
+
+  function requestRevealUpdate() {
+
+    if (animationFrame) return;
+
+
+    animationFrame =
+      requestAnimationFrame(() => {
+
+        updateRevealAnimations();
+
+        animationFrame = null;
+
+      });
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    requestRevealUpdate,
+    { passive: true }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    requestRevealUpdate
+  );
+
+
+  /*
+    Estado inicial
+  */
+
+  updateRevealAnimations();
+
+</script>
+</script>
+</body>
+</html>
+
+  
