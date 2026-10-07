@@ -169,414 +169,257 @@
 <body>
 
 <!-- =====================================================
-     NAVIGATION
+     HEADER
 ====================================================== -->
 
 <header
   id="main-header"
-  class="
-    fixed
-    top-0
-    left-0
-    right-0
-    z-50
-
-    bg-[#11100E]/40
-    backdrop-blur-sm
-
-    border-b
-    border-[#FEFFF0]/10
-
-    shadow-[0_4px_24px_rgba(0,0,0,0.12)]
-
-    px-5
-    md:px-10
-    py-5
-
-    text-[#FEFFF0]
-  "
+  class="fixed top-0 left-0 right-0 z-50
+         bg-[#11100E]/40
+         backdrop-blur-sm
+         border-b border-[#FEFFF0]/10
+         shadow-[0_4px_24px_rgba(0,0,0,0.12)]
+         px-5 md:px-10 py-5
+         text-[#FEFFF0]"
 >
 
-  <nav
-    class="
-      relative
-      flex
-      items-center
-      justify-between
-    "
-  >
+  <div class="relative flex items-center justify-between">
 
-    <!-- =================================================
-         LOGO
-    ================================================== -->
-
+    <!-- LOGO / NOMBRE -->
     <a
       href="#hero"
-      class="
-        text-sm
-        font-bold
-        tracking-tight
-        text-[#FEFFF0]
-        transition-opacity
-        duration-300
-        hover:opacity-70
-      "
+      class="text-xs md:text-sm font-semibold tracking-[-0.02em] uppercase"
     >
       DAVID RAMIREZ
     </a>
 
 
     <!-- =================================================
-         MENU DESKTOP
+         DESKTOP NAVIGATION
     ================================================== -->
 
-    <div
-      class="
-        hidden
-        md:flex
-        items-center
-        gap-8
-        text-xs
-        font-medium
-        uppercase
-        tracking-widest
-      "
+    <nav
+      class="hidden md:flex items-center gap-8
+             text-xs font-medium uppercase tracking-widest"
     >
 
       <a
-        href="#about"
-        class="
-          text-[#FEFFF0]
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+        href="#hero"
+        class="transition-opacity duration-300 hover:opacity-60"
       >
         Inicio
       </a>
 
-
       <a
-        href="#brands"
-        class="
-          text-[#FEFFF0]
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+        href="#about"
+        class="transition-opacity duration-300 hover:opacity-60"
       >
-        Marcas
+        Sobre mí
       </a>
 
-
       <a
-        href="#results"
-        class="
-          text-[#FEFFF0]
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+        href="#visual-work"
+        class="transition-opacity duration-300 hover:opacity-60"
       >
-        Resultados
+        Visual Work
       </a>
 
-
       <a
-        href="#contact"
-        class="
-          text-[#FEFFF0]
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+        href="#testimonials"
+        class="transition-opacity duration-300 hover:opacity-60"
       >
-        Contacto
+        Reseñas
       </a>
 
-    </div>
+    </nav>
 
 
     <!-- =================================================
-         BOTÓN HABLEMOS — DESKTOP
+         DESKTOP WHATSAPP
     ================================================== -->
 
     <a
-      href="#contact"
-      class="
-        hidden
-        md:inline-flex
-        items-center
-        border
-        border-[#FEFFF0]/70
-
-        rounded-full
-
-        px-4
-        py-2
-
-        text-xs
-        uppercase
-        tracking-widest
-
-        text-[#FEFFF0]
-
-        transition-all
-        duration-300
-
-        hover:bg-[#FEFFF0]
-        hover:text-[#11100E]
-        hover:border-[#FEFFF0]
-      "
+      href="https://wa.me/541168047499"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden md:inline-flex
+             items-center justify-center
+             rounded-full
+             border border-[#FEFFF0]/50
+             px-5 py-2.5
+             text-[10px]
+             uppercase
+             tracking-[0.18em]
+             transition-all
+             duration-300
+             hover:bg-[#FEFFF0]
+             hover:text-[#11100E]"
     >
       Hablemos
     </a>
 
 
- <!-- =================================================
-     BOTÓN HAMBURGUESA — MOBILE
-================================================== -->
+    <!-- =================================================
+         MOBILE MENU BUTTON
+    ================================================== -->
 
-<button
-  id="mobile-menu-button"
-  type="button"
-  aria-label="Abrir menú"
-  aria-expanded="false"
-  class="
-    md:hidden
-
-    absolute
-    right-5
-    top-1/2
-    -translate-y-1/2
-
-    flex
-    items-center
-    justify-center
-
-    w-6
-    h-6
-    p-0
-
-    text-[#FEFFF0]
-  "
->
-
-  <span
-    id="menu-icon-open"
-    class="
-      text-xl
-      leading-none
-      font-light
-    "
-  >
-    ☰
-  </span>
-
-  <span
-    id="menu-icon-close"
-    class="
-      hidden
-      text-2xl
-      leading-none
-      font-light
-    "
-  >
-    ×
-  </span>
-
-</button>
-
-  </nav>
-
-
- <!-- =================================================
-     MOBILE MENU
-================================================== -->
-
-<div
-  id="mobile-menu"
-  class="
-    md:hidden
-
-    absolute
-    left-0
-    right-0
-    top-full
-
-    h-[calc(100vh-73px)]
-
-    z-[9999]
-
-    bg-[#11100E]
-    text-[#FEFFF0]
-
-    opacity-0
-    invisible
-    pointer-events-none
-
-    transition-all
-    duration-300
-    ease-out
-  "
->
-
-  <div
-    class="
-      flex
-      h-full
-      flex-col
-      justify-between
-
-      px-5
-      pt-10
-      pb-8
-
-      bg-[#11100E]
-    "
-  >
-
-    <!-- LINKS -->
-
-    <div
-      class="
-        flex
-        flex-col
-      "
+    <button
+      id="mobile-menu-button"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      class="md:hidden
+             absolute
+             right-0
+             top-1/2
+             -translate-y-1/2
+             flex
+             items-center
+             justify-center
+             w-6
+             h-6
+             p-0
+             text-[#FEFFF0]"
     >
 
-      <a
-        href="#about"
-        class="
-          mobile-menu-link
-
-          border-b
-          border-[#FEFFF0]/10
-
-          py-5
-
-          text-3xl
-          font-medium
-          tracking-[-0.03em]
-
-          text-[#FEFFF0]
-
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+      <span
+        id="menu-icon-open"
+        class="text-xl leading-none font-light"
       >
-        Inicio
-      </a>
+        ☰
+      </span>
 
-
-      <a
-        href="#brands"
-        class="
-          mobile-menu-link
-
-          border-b
-          border-[#FEFFF0]/10
-
-          py-5
-
-          text-3xl
-          font-medium
-          tracking-[-0.03em]
-
-          text-[#FEFFF0]
-
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
+      <span
+        id="menu-icon-close"
+        class="hidden text-2xl leading-none font-light"
       >
-        Marcas
-      </a>
+        ×
+      </span>
 
+    </button>
 
-      <a
-        href="#results"
-        class="
-          mobile-menu-link
-
-          border-b
-          border-[#FEFFF0]/10
-
-          py-5
-
-          text-3xl
-          font-medium
-          tracking-[-0.03em]
-
-          text-[#FEFFF0]
-
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
-      >
-        Resultados
-      </a>
-
-
-      <a
-        href="#contact"
-        class="
-          mobile-menu-link
-
-          border-b
-          border-[#FEFFF0]/10
-
-          py-5
-
-          text-3xl
-          font-medium
-          tracking-[-0.03em]
-
-          text-[#FEFFF0]
-
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
-      >
-        Contacto
-      </a>
-
-
-      <a
-        href="#contact"
-        class="
-          mobile-menu-link
-
-          border-b
-          border-[#FEFFF0]/10
-
-          py-5
-
-          text-3xl
-          font-medium
-          tracking-[-0.03em]
-
-          text-[#FEFFF0]
-
-          transition-opacity
-          duration-300
-          hover:opacity-60
-        "
-      >
-        Hablemos
-      </a>
-
-    </div>
-    
   </div>
 
-</div>
-      <div>
 
-      </div>
+  <!-- =================================================
+       MOBILE MENU
+  ================================================== -->
+
+  <div
+    id="mobile-menu"
+    class="md:hidden
+           absolute
+           left-0
+           right-0
+           top-full
+           h-[calc(100vh-73px)]
+           z-[9999]
+           bg-[#11100E]
+           text-[#FEFFF0]
+           opacity-0
+           invisible
+           pointer-events-none
+           transition-all
+           duration-300
+           ease-out"
+  >
+
+    <div
+      class="flex
+             h-full
+             flex-col
+             justify-between
+             px-5
+             pt-10
+             pb-8
+             bg-[#11100E]"
+    >
+
+      <nav class="flex flex-col">
+
+        <a
+          href="#hero"
+          class="mobile-menu-link
+                 border-b border-[#FEFFF0]/10
+                 py-5
+                 text-3xl
+                 font-medium
+                 tracking-[-0.03em]
+                 text-[#FEFFF0]
+                 transition-opacity
+                 duration-300
+                 hover:opacity-60"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="#about"
+          class="mobile-menu-link
+                 border-b border-[#FEFFF0]/10
+                 py-5
+                 text-3xl
+                 font-medium
+                 tracking-[-0.03em]
+                 text-[#FEFFF0]
+                 transition-opacity
+                 duration-300
+                 hover:opacity-60"
+        >
+          Sobre mí
+        </a>
+
+        <a
+          href="#visual-work"
+          class="mobile-menu-link
+                 border-b border-[#FEFFF0]/10
+                 py-5
+                 text-3xl
+                 font-medium
+                 tracking-[-0.03em]
+                 text-[#FEFFF0]
+                 transition-opacity
+                 duration-300
+                 hover:opacity-60"
+        >
+          Visual Work
+        </a>
+
+        <a
+          href="#testimonials"
+          class="mobile-menu-link
+                 border-b border-[#FEFFF0]/10
+                 py-5
+                 text-3xl
+                 font-medium
+                 tracking-[-0.03em]
+                 text-[#FEFFF0]
+                 transition-opacity
+                 duration-300
+                 hover:opacity-60"
+        >
+          Reseñas
+        </a>
+
+        <a
+          href="https://wa.me/541168047499"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-menu-link
+                 border-b border-[#FEFFF0]/10
+                 py-5
+                 text-3xl
+                 font-medium
+                 tracking-[-0.03em]
+                 text-[#FEFFF0]
+                 transition-opacity
+                 duration-300
+                 hover:opacity-60"
+        >
+          Hablemos
+        </a>
+
+      </nav>
 
     </div>
 
@@ -682,111 +525,189 @@
   });
 </script>
   <!-- =====================================================
-       01 — HERO
-       Pantalla completa.
-  ====================================================== -->
+     01 — HERO
+     Pantalla completa.
+====================================================== -->
 
-  <section
-    id="hero"
-    class="hero-image
-           relative
-           min-h-screen
-           w-full
+<section
+  id="hero"
+  class="hero-image
+         relative
+         min-h-screen
+         w-full
+         flex
+         flex-col
+         justify-between
+         overflow-hidden
+         text-white"
+>
+
+  <!-- Overlay -->
+
+  <div
+    class="absolute
+           inset-0
+           bg-gradient-to-r
+           from-black/55
+           via-black/15
+           to-black/10"
+  ></div>
+
+
+  <!-- Content -->
+
+  <div
+    class="relative
+           z-10
+           flex-1
            flex
-           flex-col
-           justify-between
-           overflow-hidden
-           text-white"
+           items-center
+           px-5
+           md:px-12
+           pt-28
+           md:pt-24
+           pb-12
+           md:pb-16"
   >
 
-    <!-- Overlay -->
+    <div class="max-w-3xl">
 
-    <div
-      class="absolute
-             inset-0
-             bg-gradient-to-r
-             from-black/55
-             via-black/15
-             to-black/10"
-    ></div>
+      <!-- Eyebrow -->
+
+      <p
+        class="mb-5
+               text-xs
+               md:text-sm
+               tracking-[0.35em]
+               uppercase
+               opacity-80"
+      >
+        Content Creator · UGC · IA
+      </p>
 
 
-    <!-- Content -->
+      <!-- Nombre -->
 
-    <div
-  class="relative
-         z-10
-         flex-1
-         flex
-         items-center
-         px-5
-         md:px-12
-         pt-28
-         md:pt-24
-         pb-12
-         md:pb-16"
-    >
+      <h1
+        class="text-[clamp(3.5rem,16vw,10rem)]
+               md:text-[clamp(4rem,11vw,10rem)]
+               leading-[0.8]
+               font-bold
+               tracking-[-0.07em]"
+      >
+        DAVID<br>
+        RAMIREZ
+      </h1>
 
-      <div class="max-w-3xl">
+
+      <!-- Descripción -->
+
+      <div class="mt-7 md:mt-8 max-w-xl">
 
         <p
-          class="mb-5
-                 text-xs
-                 md:text-sm
-                 tracking-[0.35em]
-                 uppercase
-                 opacity-80"
+          class="text-base
+                 md:text-2xl
+                 font-medium
+                 leading-tight"
         >
-          Content Creator · UGC · IA
+          Conectando marcas con audiencias reales
+          a través de contenido, creatividad y estrategia.
         </p>
 
 
-        <h1
-  class="text-[clamp(3.5rem,16vw,10rem)]
-         md:text-[clamp(4rem,11vw,10rem)]
-         leading-[0.8]
-         font-bold
-         tracking-[-0.07em]"
->
-          DAVID<br>
-          RAMIREZ
-        </h1>
+        <!-- Selector de audiencia -->
 
+        <div class="mt-8">
 
-        <div class="mt-7 md:mt-8 max-w-xl">
+          <!-- Texto guía -->
 
           <p
-            class="text-base
-       md:text-2xl
-       font-medium
-       leading-tight"
+            class="mb-2
+                   text-[10px]
+                   md:text-xs
+                   uppercase
+                   tracking-[0.22em]
+                   text-[#FEFFF0]/80"
           >
-            Conectando marcas con audiencias reales
-            a través de contenido, creatividad y estrategia.
+            ¿Qué estás buscando?
+          </p>
+
+          <p
+            class="mb-5
+                   text-xs
+                   md:text-sm
+                   text-[#FEFFF0]/65"
+          >
+            Elegí tu perfil para conocer más.
           </p>
 
 
-          <a
-            href="#visual-work"
-            class="inline-flex
-       mt-7
-       md:mt-8
-       items-center
-       gap-3
-       border
-       border-white/70
-       rounded-full
-       px-6
-       py-3
-       text-sm
-       uppercase
-       tracking-widest
-       hover:bg-white
-       hover:text-black
-       transition"
+          <!-- Botones -->
+
+          <div
+            class="flex
+                   flex-wrap
+                   items-center
+                   gap-3
+                   md:gap-4"
           >
-            Ver mi trabajo
-          </a>
+
+            <!-- MARCA / AGENCIA -->
+
+            <a
+              href="/marcas/"
+              class="inline-flex
+                     items-center
+                     justify-center
+                     rounded-full
+                     border
+                     border-[#FEFFF0]/75
+                     bg-[#11100E]/15
+                     px-6
+                     py-3
+                     text-[10px]
+                     md:text-xs
+                     uppercase
+                     tracking-[0.18em]
+                     text-[#FEFFF0]
+                     transition-all
+                     duration-300
+                     hover:bg-[#FEFFF0]
+                     hover:text-[#11100E]
+                     hover:border-[#FEFFF0]"
+            >
+              Marca / Agencia
+            </a>
+
+
+            <!-- EMPRENDEDOR -->
+
+            <a
+              href="/emprendedores/"
+              class="inline-flex
+                     items-center
+                     justify-center
+                     rounded-full
+                     border
+                     border-[#FEFFF0]/75
+                     bg-[#11100E]/15
+                     px-6
+                     py-3
+                     text-[10px]
+                     md:text-xs
+                     uppercase
+                     tracking-[0.18em]
+                     text-[#FEFFF0]
+                     transition-all
+                     duration-300
+                     hover:bg-[#FEFFF0]
+                     hover:text-[#11100E]
+                     hover:border-[#FEFFF0]"
+            >
+              Emprendedor
+            </a>
+
+          </div>
 
         </div>
 
@@ -794,49 +715,50 @@
 
     </div>
 
+  </div>
 
-    <!-- Metadata -->
+
+  <!-- Metadata -->
+
+  <div
+    class="relative
+           z-10
+           px-5
+           md:px-12
+           pb-5
+           md:pb-7
+           flex
+           justify-between
+           items-end"
+  >
 
     <div
-      class="relative
-       z-10
-       px-5
-       md:px-12
-       pb-5
-       md:pb-7
-       flex
-       justify-between
-       items-end"
+      class="text-[10px]
+             md:text-xs
+             uppercase
+             tracking-[0.25em]
+             opacity-70"
     >
-
-      <div
-        class="text-[10px]
-               md:text-xs
-               uppercase
-               tracking-[0.25em]
-               opacity-70"
-      >
-        Content Creator<br>
-        Marketing Digital
-      </div>
-
-
-      <div
-        class="text-[10px]
-               md:text-xs
-               uppercase
-               tracking-[0.25em]
-               opacity-70
-               text-right"
-      >
-        2026 — Buenos Aires<br>
-        Argentina
-      </div>
-
+      Content Creator<br>
+      Marketing Digital
     </div>
 
-  </section>
 
+    <div
+      class="text-[10px]
+             md:text-xs
+             uppercase
+             tracking-[0.25em]
+             opacity-70
+             text-right"
+    >
+      2026 — Buenos Aires<br>
+      Argentina
+    </div>
+
+  </div>
+
+</section>
 
   <!-- =====================================================
        MARQUEE

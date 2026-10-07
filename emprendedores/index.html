@@ -1,0 +1,3451 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Soy Emprendedor — Marketing, IA y estrategia para construir negocios que conectan, convierten y crecen."
+  />
+
+  <title>Soy Emprendedor — David Ramirez</title>
+
+  <!-- =====================================================
+       FONTS — MISMO SISTEMA DEL PORTFOLIO PRINCIPAL
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =====================================================
+       TAILWIND
+  ====================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          fontFamily: {
+
+            sans: ['DM Sans', 'sans-serif'],
+
+            inter: ['Inter', 'sans-serif']
+
+          },
+
+          colors: {
+
+            cream: '#FEFFF0',
+
+            brown: '#3B2115',
+
+            brownLight: '#7A4A2E'
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+  <!-- =====================================================
+       GLOBAL STYLES
+  ====================================================== -->
+
+  <style>
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      margin: 0;
+
+      background: #FEFFF0;
+
+      color: #11100E;
+
+      font-family: 'DM Sans', sans-serif;
+
+      overflow-x: hidden;
+
+    }
+
+    ::selection {
+
+      background: #11100E;
+
+      color: #FEFFF0;
+
+    }
+
+    img,
+    video {
+
+      max-width: 100%;
+
+    }
+
+    a,
+    button {
+
+      -webkit-tap-highlight-color: transparent;
+
+    }
+
+    /* =====================================================
+       DESIGN SYSTEM
+    ====================================================== */
+
+    .page-shell {
+
+      width: min(
+        1500px,
+        calc(100% - 40px)
+      );
+
+      margin-inline: auto;
+
+    }
+
+    .eyebrow {
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 10px;
+
+      line-height: 1;
+
+      text-transform: uppercase;
+
+      letter-spacing: .28em;
+
+      font-weight: 500;
+
+    }
+
+    .display {
+
+      font-family: 'DM Sans', sans-serif;
+
+      font-weight: 700;
+
+      letter-spacing: -.07em;
+
+      line-height: .82;
+
+    }
+
+    .body-copy {
+
+      font-family: 'DM Sans', sans-serif;
+
+    }
+
+    /* =====================================================
+       HEADER
+       MISMO SISTEMA DEL PORTFOLIO PRINCIPAL
+    ====================================================== */
+
+    .main-header {
+
+      background:
+        rgba(17,16,14,.40);
+
+      backdrop-filter:
+        blur(8px);
+
+      -webkit-backdrop-filter:
+        blur(8px);
+
+      border-bottom:
+        1px solid
+        rgba(254,255,240,.10);
+
+      box-shadow:
+        0 4px 24px
+        rgba(0,0,0,.12);
+
+    }
+
+    .header-link {
+
+      color: #FEFFF0;
+
+      transition:
+        opacity .3s ease;
+
+    }
+
+    .header-link:hover {
+
+      opacity: .60;
+
+    }
+
+    .header-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      border:
+        1px solid
+        rgba(254,255,240,.70);
+
+      border-radius: 999px;
+
+      padding:
+        8px 16px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .20em;
+
+      color: #FEFFF0;
+
+      transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+
+    }
+
+    .header-button:hover {
+
+      background: #FEFFF0;
+
+      color: #11100E;
+
+      border-color: #FEFFF0;
+
+    }
+
+    /* =====================================================
+       MOBILE MENU
+    ====================================================== */
+
+    .mobile-menu {
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transition:
+        opacity .3s ease;
+
+    }
+
+    .mobile-menu.is-open {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      pointer-events: auto;
+
+    }
+
+    /* =====================================================
+       REVEAL
+    ====================================================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(28px);
+
+      transition:
+
+        opacity .8s
+        cubic-bezier(.22,1,.36,1),
+
+        transform .8s
+        cubic-bezier(.22,1,.36,1);
+
+    }
+
+    .reveal.is-visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+    }
+
+    .reveal-delay-1 {
+
+      transition-delay: .08s;
+
+    }
+
+    .reveal-delay-2 {
+
+      transition-delay: .16s;
+
+    }
+
+    .reveal-delay-3 {
+
+      transition-delay: .24s;
+
+    }
+
+    .reveal-delay-4 {
+
+      transition-delay: .32s;
+
+    }
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
+    .hero-title {
+
+      font-size:
+        clamp(
+          4.5rem,
+          13vw,
+          11rem
+        );
+
+      font-weight: 700;
+
+      line-height: .78;
+
+      letter-spacing: -.075em;
+
+    }
+
+    /* =====================================================
+       SECTION TITLES
+    ====================================================== */
+
+    .section-title {
+
+      font-size:
+        clamp(
+          3.7rem,
+          8vw,
+          8.5rem
+        );
+
+      font-weight: 700;
+
+      line-height: .82;
+
+      letter-spacing: -.075em;
+
+    }
+
+    .statement {
+
+      font-size:
+        clamp(
+          2.2rem,
+          5.5vw,
+          6rem
+        );
+
+      font-weight: 600;
+
+      line-height: .90;
+
+      letter-spacing: -.065em;
+
+    }
+
+    /* =====================================================
+       BUTTONS
+    ====================================================== */
+
+    .portfolio-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      border:
+        1px solid
+        rgba(17,16,14,.70);
+
+      border-radius: 999px;
+
+      padding:
+        12px 19px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .18em;
+
+      transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+    }
+
+    .portfolio-button:hover {
+
+      background: #11100E;
+
+      color: #FEFFF0;
+
+      transform:
+        translateY(-2px);
+
+    }
+
+    .portfolio-button-dark {
+
+      border-color:
+        rgba(254,255,240,.70);
+
+      color: #FEFFF0;
+
+    }
+
+    .portfolio-button-dark:hover {
+
+      background: #FEFFF0;
+
+      color: #11100E;
+
+    }
+
+    /* =====================================================
+       FUNNEL
+    ====================================================== */
+
+    .funnel-wrapper {
+
+      max-width: 1050px;
+
+      margin-left: auto;
+
+    }
+
+    .funnel-item {
+
+      border-top:
+        1px solid
+        currentColor;
+
+      padding:
+        22px 0 25px;
+
+      transition:
+        padding-left .35s ease;
+
+    }
+
+    .funnel-item:hover {
+
+      padding-left:
+        14px;
+
+    }
+
+    .funnel-number {
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .20em;
+
+      opacity: .50;
+
+    }
+
+    .funnel-title {
+
+      font-size:
+        clamp(
+          2rem,
+          4.5vw,
+          5rem
+        );
+
+      font-weight: 600;
+
+      line-height: .88;
+
+      letter-spacing: -.06em;
+
+    }
+
+    /* =====================================================
+       GO VIRAL
+    ====================================================== */
+
+    .viral-title {
+
+      font-size:
+        clamp(
+          2.8rem,
+          6vw,
+          7rem
+        );
+
+      line-height: .82;
+
+      letter-spacing: -.07em;
+
+      font-weight: 700;
+
+    }
+
+    .viral-row {
+
+      border-bottom:
+        1px solid
+        rgba(17,16,14,.15);
+
+      padding:
+        18px 0;
+
+    }
+
+    /* =====================================================
+       HISTORY
+    ====================================================== */
+
+    .history-name {
+
+      font-size:
+        clamp(
+          4rem,
+          8vw,
+          9rem
+        );
+
+      line-height: .78;
+
+      letter-spacing: -.075em;
+
+      font-weight: 700;
+
+    }
+
+    /* =====================================================
+       SERVICES
+    ====================================================== */
+
+    .service-row {
+
+      border-top:
+        1px solid
+        rgba(17,16,14,.16);
+
+      padding:
+        22px 0;
+
+      transition:
+        padding-left .35s ease;
+
+    }
+
+    .service-row:hover {
+
+      padding-left:
+        14px;
+
+    }
+
+    .service-name {
+
+      font-size:
+        clamp(
+          1.6rem,
+          3vw,
+          3rem
+        );
+
+      line-height: .95;
+
+      letter-spacing: -.05em;
+
+      font-weight: 500;
+
+    }
+
+    /* =====================================================
+       SCROLL
+    ====================================================== */
+
+    .scroll-indicator {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 9px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .20em;
+
+      opacity: .65;
+
+    }
+
+    .scroll-line {
+
+      width: 1px;
+
+      height: 45px;
+
+      background:
+        currentColor;
+
+      transform-origin:
+        top;
+
+      animation:
+        scrollPulse 1.8s
+        ease-in-out
+        infinite;
+
+    }
+
+    @keyframes scrollPulse {
+
+      0%,
+      100% {
+
+        transform:
+          scaleY(.35);
+
+        opacity: .35;
+
+      }
+
+      50% {
+
+        transform:
+          scaleY(1);
+
+        opacity: 1;
+
+      }
+
+    }
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 768px) {
+
+      .page-shell {
+
+        width:
+          calc(100% - 30px);
+
+      }
+
+      .hero-title {
+
+        font-size:
+          clamp(
+            3rem,
+            14vw,
+            11rem
+          );
+
+      }
+
+      .funnel-item {
+
+        width: 100% !important;
+
+      }
+
+      .service-row:hover {
+
+        padding-left: 0;
+
+      }
+
+      .funnel-item:hover {
+
+        padding-left: 0;
+
+      }
+
+    }
+
+    /* =====================================================
+       REDUCED MOTION
+    ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior:
+          auto;
+
+      }
+
+      * {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+      }
+
+      .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+     MISMO MENU DEL PORTFOLIO PRINCIPAL
+====================================================== -->
+
+<header
+  id="main-header"
+
+  class="
+    main-header
+
+    fixed
+    top-0
+    left-0
+    right-0
+
+    z-50
+
+    px-5
+    md:px-10
+
+    py-5
+
+    text-[#FEFFF0]
+  "
+>
+
+  <nav
+    class="
+      relative
+
+      flex
+      items-center
+      justify-between
+    "
+  >
+
+    <!-- LOGO -->
+
+    <a
+      href="../index.html"
+
+      class="
+        text-sm
+
+        font-bold
+
+        tracking-tight
+
+        header-link
+      "
+    >
+
+      DAVID RAMIREZ
+
+    </a>
+
+<!-- DESKTOP NAV -->
+
+<nav
+  class="
+    hidden
+    md:flex
+    items-center
+    gap-8
+    text-xs
+    font-medium
+    uppercase
+    tracking-widest
+  "
+>
+
+  <!-- INICIO -->
+
+  <a
+    href="../index.html"
+    class="hover:opacity-60 transition-opacity"
+  >
+    Inicio
+  </a>
+
+  <!-- GO VIRAL -->
+
+  <a
+    href="#go-viral"
+    class="hover:opacity-60 transition-opacity"
+  >
+    Go Viral
+  </a>
+
+  <!-- SERVICIOS -->
+
+  <a
+    href="#servicios"
+    class="hover:opacity-60 transition-opacity"
+  >
+    Servicios
+  </a>
+
+  <!-- MÁS -->
+
+  <div class="relative group">
+
+    <button
+      type="button"
+      class="
+        flex
+        items-center
+        gap-2
+        hover:opacity-60
+        transition-opacity
+      "
+    >
+
+      MAS
+
+      <span
+        class="
+          text-[9px]
+          transition-transform
+          duration-300
+          group-hover:rotate-180
+        "
+      >
+        ↓
+      </span>
+
+    </button>
+
+    <!-- DROPDOWN -->
+
+    <div
+      class="
+        absolute
+        right-0
+        top-full
+        pt-4
+
+        opacity-0
+        invisible
+        pointer-events-none
+
+        group-hover:opacity-100
+        group-hover:visible
+        group-hover:pointer-events-auto
+
+        transition-all
+        duration-200
+      "
+    >
+
+      <div
+        class="
+          w-52
+          bg-[#11100E]
+          border
+          border-[#FEFFF0]/10
+          shadow-[0_12px_35px_rgba(0,0,0,0.2)]
+          p-2
+        "
+      >
+        <!-- SOY MARCA -->
+
+        <a
+          href="../marcas/index.html"
+          class="
+            block
+            px-4
+            py-3
+            text-[11px]
+            tracking-widest
+            uppercase
+            text-[#FEFFF0]/80
+            hover:text-[#FEFFF0]
+            hover:bg-[#FEFFF0]/10
+            transition
+          "
+        >
+          Soy Marca
+        </a>
+
+        <!-- PÁGINA ACTUAL -->
+
+        <a
+          href="./index.html"
+          class="
+            flex
+            items-center
+            justify-between
+
+            px-4
+            py-3
+
+            text-[11px]
+            tracking-widest
+            uppercase
+
+            bg-[#FEFFF0]/10
+            text-[#FEFFF0]
+          "
+        >
+
+          <span>
+            Soy Emprendedor
+          </span>
+
+          <span class="text-[9px] opacity-60">
+            ●
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+
+   <a
+  href="https://wa.me/5491151147647?text=Hola%20David%2C%20quiero%20agendar%20una%20Call%20con%20vos%20para%20conocer%20mi%20Plan."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="
+    hidden
+    md:inline-flex
+    items-center
+    justify-center
+
+    border
+    border-[#FEFFF0]/70
+
+    rounded-full
+
+    px-4
+    py-2
+
+    text-xs
+    uppercase
+    tracking-widest
+
+    hover:bg-[#FEFFF0]
+    hover:text-[#11100E]
+
+    transition
+  "
+>
+  Hablemos
+</a>
+
+    <!-- MOBILE BUTTON -->
+
+    <button
+      id="mobile-menu-button"
+
+      type="button"
+
+      aria-label="Abrir menú"
+
+      aria-expanded="false"
+
+      class="
+        md:hidden
+
+        w-7
+        h-7
+
+        flex
+        items-center
+        justify-center
+
+        text-[#FEFFF0]
+      "
+    >
+
+      <span
+        id="menu-icon-open"
+
+        class="
+          text-xl
+          leading-none
+        "
+      >
+
+        ☰
+
+      </span>
+
+      <span
+        id="menu-icon-close"
+
+        class="
+          hidden
+
+          text-2xl
+
+          leading-none
+        "
+      >
+
+        ×
+
+      </span>
+
+    </button>
+
+  </nav>
+
+  <!-- MOBILE MENU -->
+
+  <div
+    id="mobile-menu"
+
+    class="
+      mobile-menu
+
+      md:hidden
+
+      absolute
+
+      left-0
+      right-0
+
+      top-full
+
+      h-[calc(100vh-73px)]
+
+      z-[9999]
+
+      bg-[#11100E]
+
+      text-[#FEFFF0]
+    "
+  >
+
+    <div
+      class="
+        flex
+        h-full
+
+        flex-col
+
+        px-5
+
+        pt-10
+      "
+    >
+
+      <a
+        href="../index.html"
+
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+
+        Inicio
+
+      </a>
+
+      <a
+        href="../marcas/index.html"
+
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+
+        Marcas
+
+      </a>
+
+      <a
+        href="#funnel"
+
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+
+        Resultados
+
+      </a>
+
+      <a
+        href="#contacto"
+
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+
+        Contacto
+
+      </a>
+
+      <a
+        href="#contacto"
+
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+
+        Hablemos
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- =====================================================
+     MOBILE MENU SCRIPT
+====================================================== -->
+
+<script>
+
+  const mobileMenuButton =
+    document.getElementById(
+      "mobile-menu-button"
+    );
+
+  const mobileMenu =
+    document.getElementById(
+      "mobile-menu"
+    );
+
+  const menuIconOpen =
+    document.getElementById(
+      "menu-icon-open"
+    );
+
+  const menuIconClose =
+    document.getElementById(
+      "menu-icon-close"
+    );
+
+  function toggleMobileMenu() {
+
+    const isOpen =
+      mobileMenuButton.getAttribute(
+        "aria-expanded"
+      ) === "true";
+
+    mobileMenuButton.setAttribute(
+      "aria-expanded",
+      String(!isOpen)
+    );
+
+    if (!isOpen) {
+
+      mobileMenu.classList.add(
+        "is-open"
+      );
+
+      menuIconOpen.classList.add(
+        "hidden"
+      );
+
+      menuIconClose.classList.remove(
+        "hidden"
+      );
+
+      document.body.style.overflow =
+        "hidden";
+
+    }
+
+    else {
+
+      mobileMenu.classList.remove(
+        "is-open"
+      );
+
+      menuIconOpen.classList.remove(
+        "hidden"
+      );
+
+      menuIconClose.classList.add(
+        "hidden"
+      );
+
+      document.body.style.overflow =
+        "";
+
+    }
+
+  }
+
+  mobileMenuButton.addEventListener(
+    "click",
+    toggleMobileMenu
+  );
+
+  document
+    .querySelectorAll(
+      ".mobile-menu-link"
+    )
+    .forEach(
+      link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileMenu.classList.remove(
+              "is-open"
+            );
+
+            menuIconOpen.classList.remove(
+              "hidden"
+            );
+
+            menuIconClose.classList.add(
+              "hidden"
+            );
+
+            mobileMenuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            document.body.style.overflow =
+              "";
+
+          }
+        );
+
+      }
+    );
+
+</script>
+
+<!-- =====================================================
+     HERO
+     PROPIO DE SOY EMPRENDEDOR
+====================================================== -->
+
+<section
+  id="inicio"
+
+  class="
+    min-h-screen
+
+    pt-[76px]
+
+    flex
+    items-center
+
+    relative
+
+    bg-[#FEFFF0]
+  "
+>
+
+  <div
+    class="
+      page-shell
+
+      w-full
+
+      py-20
+
+      flex
+      flex-col
+      items-center
+      justify-center
+
+      text-center
+    "
+  >
+
+    <p
+      class="
+        eyebrow
+
+        mb-8
+
+        opacity-50
+
+        reveal
+      "
+    >
+
+      Marketing · IA · Estrategia
+
+    </p>
+
+    <h1
+      class="
+        hero-title
+
+        display
+
+        reveal
+        reveal-delay-1
+      "
+    >
+
+      SOY<br>
+
+      EMPRENDEDOR
+
+    </h1>
+
+    <p
+      class="
+        max-w-xl
+
+        mt-9
+
+        text-base
+        md:text-xl
+
+        leading-tight
+
+        opacity-70
+
+        reveal
+        reveal-delay-2
+      "
+    >
+
+      Tu negocio no necesita hacer más ruido.
+      <br class="hidden md:block">
+
+      Necesita una estrategia que haga
+      que cada acción cuente.
+
+    </p>
+
+    <!-- SCROLL -->
+
+    <div
+      class="
+        absolute
+
+        bottom-8
+
+        left-1/2
+
+        -translate-x-1/2
+      "
+    >
+
+      <div class="scroll-indicator">
+
+        <span>
+
+          Scroll para descubrir
+
+        </span>
+
+        <span class="scroll-line"></span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     MARKETING + IA
+====================================================== -->
+
+<section
+  id="marketing-ia"
+
+  class="
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <p
+      class="
+        eyebrow
+
+        opacity-50
+
+        mb-12
+
+        reveal
+      "
+    >
+
+      01 / Marketing + IA
+
+    </p>
+
+    <h2
+      class="
+        statement
+
+        max-w-6xl
+
+        reveal
+        reveal-delay-1
+      "
+    >
+
+      AUTOMATIZÁ
+      LO REPETITIVO.
+
+    </h2>
+
+    <h2
+      class="
+        statement
+
+        max-w-6xl
+
+        mt-2
+
+        reveal
+        reveal-delay-2
+      "
+    >
+
+      HUMANIZÁ
+      LO IMPORTANTE.
+
+    </h2>
+
+    <h2
+      class="
+        statement
+
+        max-w-6xl
+
+        mt-2
+
+        reveal
+        reveal-delay-3
+      "
+    >
+
+      CRECÉ SIN
+      PERDER EL VÍNCULO.
+
+    </h2>
+
+    <div
+      class="
+        grid
+
+        md:grid-cols-3
+
+        gap-10
+
+        mt-20
+
+        pt-8
+
+        border-t
+
+        border-black/10
+
+        reveal
+        reveal-delay-4
+      "
+    >
+
+      <div>
+
+        <p
+          class="
+            eyebrow
+
+            mb-5
+          "
+        >
+
+          Automatizar
+
+        </p>
+
+        <p
+          class="
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-65
+
+            max-w-sm
+          "
+        >
+
+          Procesos, respuestas,
+          contenido y tareas que
+          no necesitan ocupar
+          tu tiempo.
+
+        </p>
+
+      </div>
+
+      <div>
+
+        <p
+          class="
+            eyebrow
+
+            mb-5
+          "
+        >
+
+          Humanizar
+
+        </p>
+
+        <p
+          class="
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-65
+
+            max-w-sm
+          "
+        >
+
+          La tecnología acelera,
+          pero las conversaciones
+          importantes siguen
+          necesitando conexión.
+
+        </p>
+
+      </div>
+
+      <div>
+
+        <p
+          class="
+            eyebrow
+
+            mb-5
+          "
+        >
+
+          Convertir
+
+        </p>
+
+        <p
+          class="
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-65
+
+            max-w-sm
+          "
+        >
+
+          La IA sirve cuando mejora
+          la experiencia, reduce
+          fricción y acerca personas
+          a tu negocio.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     FUNNEL DEL ÉXITO
+====================================================== -->
+
+<section
+  id="funnel"
+
+  class="
+    bg-[#11100E]
+
+    text-[#FEFFF0]
+
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <div
+      class="
+        grid
+
+        md:grid-cols-12
+
+        gap-10
+
+        mb-20
+      "
+    >
+
+      <div
+        class="
+          md:col-span-4
+
+          reveal
+        "
+      >
+
+        <p
+          class="
+            eyebrow
+
+            opacity-50
+          "
+        >
+
+          02 / El funnel del éxito
+
+        </p>
+
+      </div>
+
+      <div
+        class="
+          md:col-span-8
+        "
+      >
+
+        <h2
+          class="
+            section-title
+
+            reveal
+            reveal-delay-1
+          "
+        >
+
+          TODO<br>
+          EMPIEZA<br>
+          CON ATENCIÓN.
+
+        </h2>
+
+        <p
+          class="
+            max-w-xl
+
+            mt-10
+
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-60
+
+            reveal
+            reveal-delay-2
+          "
+        >
+
+          El contenido atrae.
+          El marketing conecta.
+          La IA ordena y acelera.
+          El sistema completo convierte
+          atención en clientes y clientes
+          en crecimiento.
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- FUNNEL -->
+
+    <div class="funnel-wrapper">
+
+      <!-- 01 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-full
+
+          reveal
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            01 / Alcance
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          CONTENIDO
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          Hacé que te descubran
+          antes de que necesiten
+          comprarte.
+
+        </p>
+
+      </div>
+
+      <!-- 02 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-[91%]
+
+          reveal
+          reveal-delay-1
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            02 / Atención
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          HOOK
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          La primera impresión
+          decide si alguien se queda
+          o sigue scrolleando.
+
+        </p>
+
+      </div>
+
+      <!-- 03 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-[82%]
+
+          reveal
+          reveal-delay-2
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            03 / Conexión
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          STORYTELLING
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          Una historia convierte
+          información en algo
+          que la gente recuerda.
+
+        </p>
+
+      </div>
+
+      <!-- 04 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-[73%]
+
+          reveal
+          reveal-delay-3
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            04 / Sistema
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          MARKETING + IA
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          Automatizá lo que se puede
+          automatizar y usá tu energía
+          donde realmente importa.
+
+        </p>
+
+      </div>
+
+      <!-- 05 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-[64%]
+
+          reveal
+          reveal-delay-4
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            05 / Acción
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          CONVERSIÓN
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          Menos fricción.
+          Más claridad.
+          Una experiencia que
+          facilita decir que sí.
+
+        </p>
+
+      </div>
+
+      <!-- 06 -->
+
+      <div
+        class="
+          funnel-item
+
+          w-[55%]
+
+          reveal
+          reveal-delay-4
+        "
+      >
+
+        <div
+          class="
+            flex
+            justify-between
+          "
+        >
+
+          <span class="funnel-number">
+
+            06 / Resultado
+
+          </span>
+
+          <span class="opacity-50">
+
+            ↓
+
+          </span>
+
+        </div>
+
+        <h3
+          class="
+            funnel-title
+
+            mt-6
+          "
+        >
+
+          CRECIMIENTO
+
+        </h3>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            max-w-lg
+
+            mt-4
+          "
+        >
+
+          Porque crecer no es
+          viralizarse una vez.
+          Es construir un sistema
+          que pueda crecer.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     DEIV GO VIRAL
+====================================================== -->
+
+<section
+  id="go-viral"
+
+  class="
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <div
+      class="
+        mb-16
+
+        reveal
+      "
+    >
+
+      <p
+        class="
+          eyebrow
+
+          opacity-50
+
+          mb-8
+        "
+      >
+
+        03 / Método propio
+
+      </p>
+
+      <h2
+        class="
+          section-title
+        "
+      >
+
+        DEIV<br>
+        GO VIRAL
+
+      </h2>
+
+    </div>
+
+    <div
+      class="
+        grid
+
+        md:grid-cols-12
+
+        gap-12
+        md:gap-20
+      "
+    >
+
+      <!-- LOGO -->
+
+      <!-- LOGO -->
+
+<div
+  class="
+    md:col-span-4
+    reveal
+  "
+>
+
+  <div
+    class="
+      aspect-square
+
+      border
+      border-black/15
+
+      flex
+      items-center
+      justify-center
+
+      overflow-hidden
+    "
+  >
+
+   <img
+  src="../assets/Go-viral.png"
+  alt="Deiv Go Viral"
+  class="w-[75%] h-auto object-contain"
+>
+
+  </div>
+
+</div>
+
+      <!-- CONTENT -->
+
+      <div
+        class="
+          md:col-span-8
+        "
+      >
+
+        <p
+          class="
+            text-xl
+            md:text-3xl
+
+            leading-tight
+
+            tracking-[-.04em]
+
+            max-w-3xl
+
+            mb-16
+
+            reveal
+          "
+        >
+
+          Un método viral que desarrollé
+          para crear contenido que atrapa,
+          conecta y persuade.
+
+        </p>
+
+        <!-- HOOK -->
+
+        <div
+          class="
+            viral-row
+
+            reveal
+          "
+        >
+
+          <h3
+            class="
+              viral-title
+            "
+          >
+
+            HOOK
+
+          </h3>
+
+          <p
+            class="
+              mt-5
+
+              text-sm
+
+              opacity-60
+
+              max-w-xl
+            "
+          >
+
+            Un inicio expresivo
+            basado en emoción
+            e inmediatez para
+            detener el scroll.
+
+          </p>
+
+        </div>
+
+        <!-- STORY -->
+
+        <div
+          class="
+            viral-row
+
+            reveal
+            reveal-delay-1
+          "
+        >
+
+          <h3
+            class="
+              viral-title
+            "
+          >
+
+            STORYTELLING
+
+          </h3>
+
+          <p
+            class="
+              mt-5
+
+              text-sm
+
+              opacity-60
+
+              max-w-xl
+            "
+          >
+
+            Una estructura propia
+            que combina storytelling,
+            oratoria y colocación
+            de la voz.
+
+          </p>
+
+        </div>
+
+        <!-- VOZ -->
+
+        <div
+          class="
+            viral-row
+
+            reveal
+            reveal-delay-2
+          "
+        >
+
+          <h3
+            class="
+              viral-title
+            "
+          >
+
+            VOZ
+
+          </h3>
+
+          <p
+            class="
+              mt-5
+
+              text-sm
+
+              opacity-60
+
+              max-w-xl
+            "
+          >
+
+            Ritmo, intención y energía
+            para que el mensaje
+            también se sienta.
+
+          </p>
+
+        </div>
+
+        <!-- PERSUASION -->
+
+        <div
+          class="
+            viral-row
+
+            reveal
+            reveal-delay-3
+          "
+        >
+
+          <h3
+            class="
+              viral-title
+            "
+          >
+
+            PERSUASIÓN
+
+          </h3>
+
+          <p
+            class="
+              mt-5
+
+              text-sm
+
+              opacity-60
+
+              max-w-xl
+            "
+          >
+
+            Un texto persuasivo
+            pensado para transformar
+            atención en interés real.
+
+          </p>
+
+        </div>
+
+        <div
+          class="
+            mt-10
+
+            reveal
+            reveal-delay-4
+          "
+        >
+
+          <p
+            class="
+              text-sm
+
+              leading-relaxed
+
+              opacity-65
+
+              max-w-xl
+
+              mb-7
+            "
+          >
+
+            En el canal de Instagram
+            vas a encontrar recursos
+            estudiados y comprobables
+            para seguir creciendo
+            con marketing de verdad.
+
+          </p>
+
+          <!--
+            REEMPLAZAR # POR EL LINK
+            REAL DE DEIV GO VIRAL
+          -->
+
+          <a
+            href="https://www.instagram.com/deivgoviral/"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            class="
+              portfolio-button
+            "
+          >
+
+            Visitar Deiv Go Viral
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     TRAYECTORIA
+====================================================== -->
+
+<section
+  id="trayectoria"
+
+  class="
+    bg-[#11100E]
+
+    text-[#FEFFF0]
+
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <p
+      class="
+        eyebrow
+
+        opacity-50
+
+        mb-12
+
+        reveal
+      "
+    >
+
+      04 / Trayectoria
+
+    </p>
+
+    <h2
+      class="
+        section-title
+
+        mb-24
+
+        reveal
+        reveal-delay-1
+      "
+    >
+
+      ANTES DE<br>
+      ENSEÑARLO<br>
+      LO HICE
+
+    </h2>
+
+    <div
+      class="
+        grid
+
+        md:grid-cols-2
+
+        gap-16
+        md:gap-24
+      "
+    >
+
+      <!-- VID -->
+
+      <article
+        class="
+          border-t
+          border-[#FEFFF0]/20
+
+          pt-7
+
+          reveal
+        "
+      >
+
+        <p
+          class="
+            eyebrow
+
+            opacity-50
+          "
+        >
+
+          Agencia
+
+        </p>
+
+        <h3
+          class="
+            history-name
+
+            mt-12
+          "
+        >
+
+          VID<br>
+          MARKETING
+
+        </h3>
+
+        <p
+          class="
+            mt-12
+
+            max-w-lg
+
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-70
+          "
+        >
+
+          Desarrollé una agencia llamada
+          <strong class="text-[#FEFFF0]">
+            Vid Marketing
+          </strong>
+          que trabajaba con pequeños negocios
+          para ayudarlos en el proceso de
+          conocimiento, posicionamiento,
+          valor, branding y propósito comunicativo.
+
+        </p>
+
+      </article>
+
+      <!-- EL REINO -->
+
+      <article
+        class="
+          border-t
+          border-[#FEFFF0]/20
+
+          pt-7
+
+          reveal
+          reveal-delay-1
+        "
+      >
+
+        <p
+          class="
+            eyebrow
+
+            opacity-50
+          "
+        >
+
+          Emprendimiento
+
+        </p>
+
+        <h3
+          class="
+            history-name
+
+            mt-12
+          "
+        >
+
+          EL<br>
+          REINO
+
+        </h3>
+
+        <p
+          class="
+            mt-12
+
+            max-w-lg
+
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-70
+          "
+        >
+
+          Un emprendimiento de ropa
+          que comenzó como un proyecto
+          propio y que gracias al marketing
+          se convirtió en un negocio familiar
+          totalmente funcional.
+
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     SERVICIOS
+====================================================== -->
+
+<section
+  id="servicios"
+
+  class="
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <div
+      class="
+        grid
+
+        md:grid-cols-12
+
+        gap-10
+
+        mb-20
+      "
+    >
+
+      <div
+        class="
+          md:col-span-4
+
+          reveal
+        "
+      >
+
+        <p
+          class="
+            eyebrow
+
+            opacity-50
+          "
+        >
+
+          05 / Servicios
+
+        </p>
+
+      </div>
+
+      <div
+        class="
+          md:col-span-8
+        "
+      >
+
+        <h2
+          class="
+            section-title
+
+            reveal
+            reveal-delay-1
+          "
+        >
+
+          TODO LO QUE<br>
+          UN NEGOCIO<br>
+          NECESITA.
+
+        </h2>
+
+        <p
+          class="
+            max-w-xl
+
+            mt-10
+
+            text-sm
+            md:text-base
+
+            leading-relaxed
+
+            opacity-65
+
+            reveal
+            reveal-delay-2
+          "
+        >
+
+          Un ecosistema de servicios
+          para acompañar diferentes
+          necesidades de un negocio:
+          desde estrategia y contenido
+          hasta automatización e IA.
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- SERVICES -->
+
+    <div
+      class="
+        border-t
+        border-black/15
+      "
+    >
+
+      <!-- 01 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      01
+    </span>
+
+    <h3 class="service-name flex-1">
+      Community Manager
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+    Gestión de comunidades ·
+    Engagement · Atención al cliente
+  </p>
+
+</div>
+
+      <!-- 02 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      02
+    </span>
+
+    <h3 class="service-name flex-1">
+      Branding
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+    Identidad visual · Manual de marca · Tono comunicacional
+  </p>
+
+</div>
+
+      <!-- 03 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      03
+    </span>
+
+    <h3 class="service-name flex-1">
+      Paid Media · Meta Ads
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Campañas publicitarias · Segmentación  · Optimización · Conversión
+  </p>
+
+</div>
+
+      <!-- 04 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      04
+    </span>
+
+    <h3 class="service-name flex-1">
+      Creador de videos
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Concepto · Guion  · Contenido para redes · Storytelling
+  </p>
+
+</div>
+
+      <!-- 05 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      05
+    </span>
+
+    <h3 class="service-name flex-1">
+      Editor
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Edición de video · Reels · TikTok · Subtítulos · Ritmo · Retención
+  </p>
+
+</div>
+
+      <!-- 06 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      06
+    </span>
+
+    <h3 class="service-name flex-1">
+      Filmmaker
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Dirección · Filmación · Composición · Iluminación · Producción audiovisual
+  </p>
+
+</div>
+
+      <!-- 07 -->
+
+      <div
+        class="
+          service-row
+
+          reveal
+        "
+      >
+
+        <div
+          class="
+            flex
+            items-center
+
+            gap-5
+          "
+        >
+
+          <span
+            class="
+              text-[10px]
+
+              opacity-40
+
+              w-7
+            "
+          >
+
+            07
+
+          </span>
+
+          <h3
+            class="
+              service-name
+
+              flex-1
+            "
+          >
+
+            Experto en IA
+
+          </h3>
+
+        </div>
+
+        <p
+          class="
+            ml-12
+
+            mt-4
+
+            text-xs
+
+            opacity-50
+
+            max-w-xl
+          "
+        >
+
+          Automatizaciones ·
+          Desarrollo web ·
+          Generación de contenido con IA ·
+          Avatares ·
+          Marketing IA
+
+        </p>
+
+      </div>
+
+      <!-- 08 -->
+
+     <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      08
+    </span>
+
+    <h3 class="service-name flex-1">
+      Social Media Planer
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Planificación · Calendario de contenidos   · Organización
+  </p>
+
+</div>
+
+      <!-- 09 -->
+
+       <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      09
+    </span>
+
+    <h3 class="service-name flex-1">
+      Project Manager
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Organización · Gestión de proyectos · Coordinación · Procesos · Seguimiento
+  </p>
+
+</div>
+
+      <!-- 10 -->
+
+      <div class="service-row reveal">
+
+  <div class="flex items-center gap-5">
+
+    <span class="text-[10px] opacity-40 w-7">
+      10
+    </span>
+
+    <h3 class="service-name flex-1">
+      Marketing Estratégico
+    </h3>
+
+  </div>
+
+  <p class="ml-12 mt-4 text-xs opacity-50 max-w-xl">
+   Estrategia · Investigación  · Crecimiento
+  </p>
+
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section
+  id="contacto"
+
+  class="
+    bg-[#11100E]
+
+    text-[#FEFFF0]
+
+    py-28
+    md:py-40
+  "
+>
+
+  <div class="page-shell">
+
+    <p
+      class="
+        eyebrow
+
+        opacity-50
+
+        mb-12
+
+        reveal
+      "
+    >
+
+      06 / Tu próximo paso
+
+    </p>
+
+    <h2
+      class="
+        text-[clamp(4rem,11vw,11rem)]
+
+        font-bold
+
+        leading-[.78]
+
+        tracking-[-.075em]
+
+        reveal
+        reveal-delay-1
+      "
+    >
+
+      TU NEGOCIO<br>
+
+      YA EMPEZÓ<br>
+
+      AHORA HAY<br>
+
+      QUE HACERLO<br>
+
+      CRECER
+
+    </h2>
+
+    <div
+      class="
+        mt-20
+
+        pt-8
+
+        border-t
+        border-[#FEFFF0]/20
+
+        flex
+        flex-col
+        md:flex-row
+
+        justify-between
+        items-start
+        md:items-end
+
+        gap-10
+
+        reveal
+        reveal-delay-2
+      "
+    >
+
+      <div>
+
+        <p
+          class="
+            text-lg
+            md:text-2xl
+
+            tracking-[-.03em]
+
+            max-w-2xl
+
+            leading-tight
+          "
+        >
+
+          Contame dónde estás
+          y construyamos juntos
+          un plan hecho para tu negocio.
+
+        </p>
+
+        <p
+          class="
+            text-sm
+
+            opacity-55
+
+            mt-5
+
+            max-w-lg
+
+            leading-relaxed
+          "
+        >
+
+          Una Asesoria personalizada para entender
+          tu situación, detectar oportunidades
+          y conocer tu Plan adecuada
+
+        </p>
+
+      </div>
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/5491151147647?text=Hola%20David%2C%20quiero%20agendar%20una%20asesoria%20con%20vos%20para%20conocer%20mi%20Plan."
+
+        target="_blank"
+
+        rel="noopener noreferrer"
+
+        class="
+          portfolio-button
+
+          portfolio-button-dark
+
+          shrink-0
+        "
+      >
+
+        Agendar mi Asesoria 
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer
+  class="
+    bg-[#11100E]
+
+    text-[#FEFFF0]
+
+    border-t
+    border-[#FEFFF0]/10
+
+    px-5
+    md:px-10
+
+    py-7
+  "
+>
+
+  <div
+    class="
+      max-w-[1500px]
+
+      mx-auto
+
+      flex
+      flex-col
+      md:flex-row
+
+      justify-between
+
+      gap-4
+
+      text-[10px]
+
+      uppercase
+
+      tracking-[0.2em]
+
+      opacity-50
+    "
+  >
+
+    <span>
+
+      David Ramirez
+
+    </span>
+
+    <span>
+
+      Marketing · IA · Estrategia
+
+    </span>
+
+    <span>
+
+      Buenos Aires · 2026
+
+    </span>
+
+  </div>
+
+</footer>
+
+<!-- =====================================================
+     REVEAL SCRIPT
+====================================================== -->
+
+<script>
+
+  const revealElements =
+    document.querySelectorAll(
+      ".reveal"
+    );
+
+  const revealObserver =
+    new IntersectionObserver(
+
+      (entries) => {
+
+        entries.forEach(
+          (entry) => {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              entry.target.classList.add(
+                "is-visible"
+              );
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          }
+        );
+
+      },
+
+      {
+
+        threshold: 0.12,
+
+        rootMargin:
+          "0px 0px -40px 0px"
+
+      }
+
+    );
+
+  revealElements.forEach(
+    (element) => {
+
+      revealObserver.observe(
+        element
+      );
+
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
