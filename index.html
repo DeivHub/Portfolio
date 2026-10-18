@@ -110,6 +110,14 @@
       scroll-margin-top: 72px;
     }
 
+    .main-header {
+      background: rgba(17, 16, 14, .40);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(254, 255, 240, .10);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .12);
+    }
+
     /* =====================================================
        METADATOS (Inter, chico, en mayúsculas)
     ====================================================== */
@@ -272,12 +280,9 @@
 
 <header
   id="main-header"
-  class="fixed top-0 left-0 right-0 z-50
-         bg-[#FEFFF0]/85
-         backdrop-blur-md
-         border-b border-[#11100E]/10
+  class="main-header fixed top-0 left-0 right-0 z-50
          px-5 md:px-10 py-5
-         text-[#11100E]"
+         text-[#FEFFF0]"
 >
 
   <div class="relative flex items-center justify-between">
@@ -330,15 +335,11 @@
       class="hidden md:inline-flex
              items-center justify-center
              rounded-full
-             bg-[#11100E]
-             text-[#FEFFF0]
+             border border-[#FEFFF0]/70
              px-5 py-2.5
-             text-[10px]
-             uppercase
-             tracking-[0.18em]
-             transition-colors
-             duration-300
-             hover:bg-[#3B2115]"
+             text-[10px] uppercase tracking-[0.18em]
+             transition-colors duration-300
+             hover:bg-[#FEFFF0] hover:text-[#11100E]"
     >
       Hablemos
     </a>
@@ -364,7 +365,7 @@
              w-11
              h-11
              p-0
-             text-[#11100E]"
+             text-[#FEFFF0]"
     >
 
       <span id="menu-icon-open" class="text-xl leading-none font-light">
