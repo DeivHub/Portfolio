@@ -38,6 +38,11 @@
        TAILWIND
   ====================================================== -->
 
+  <!-- Las animaciones de entrada solo ocultan contenido si JavaScript funciona -->
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -285,7 +290,7 @@
        REVEAL
     ====================================================== */
 
-    .reveal {
+    .js .reveal {
 
       opacity: 0;
 
@@ -302,7 +307,7 @@
 
     }
 
-    .reveal.is-visible {
+    .js .reveal.is-visible {
 
       opacity: 1;
 
@@ -430,14 +435,18 @@
 
     }
 
-    .portfolio-button:hover {
+    @media (hover: hover) {
 
-      background: #11100E;
+      .portfolio-button:hover {
 
-      color: #FEFFF0;
+        background: #11100E;
 
-      transform:
-        translateY(-2px);
+        color: #FEFFF0;
+
+        transform:
+          translateY(-2px);
+
+      }
 
     }
 
@@ -450,11 +459,15 @@
 
     }
 
-    .portfolio-button-dark:hover {
+    @media (hover: hover) {
 
-      background: #FEFFF0;
+      .portfolio-button-dark:hover {
 
-      color: #11100E;
+        background: #FEFFF0;
+
+        color: #11100E;
+
+      }
 
     }
 
@@ -484,10 +497,14 @@
 
     }
 
-    .funnel-item:hover {
+    @media (hover: hover) {
 
-      padding-left:
-        14px;
+      .funnel-item:hover {
+
+        padding-left:
+          14px;
+
+      }
 
     }
 
@@ -593,10 +610,14 @@
 
     }
 
-    .service-row:hover {
+    @media (hover: hover) {
 
-      padding-left:
-        14px;
+      .service-row:hover {
+
+        padding-left:
+          14px;
+
+      }
 
     }
 
@@ -698,13 +719,41 @@
 
       }
 
+      /* "EMPRENDEDOR" entra completo desde pantallas de 320 px */
+
       .hero-title {
 
         font-size:
           clamp(
-            3rem,
-            14vw,
+            2.6rem,
+            13vw,
             11rem
+          );
+
+      }
+
+      /* En teléfonos de 320 px los títulos de sección no rozan el borde */
+
+      .section-title {
+
+        font-size:
+          clamp(
+            2.6rem,
+            17vw,
+            3.7rem
+          );
+
+      }
+
+      /* "MARKETING" no se corta desde pantallas de 320 px */
+
+      .history-name {
+
+        font-size:
+          clamp(
+            2.6rem,
+            17vw,
+            4rem
           );
 
       }
@@ -755,7 +804,7 @@
 
       }
 
-      .reveal {
+      .js .reveal {
 
         opacity: 1;
 
@@ -917,6 +966,10 @@
         group-hover:visible
         group-hover:pointer-events-auto
 
+        group-focus-within:opacity-100
+        group-focus-within:visible
+        group-focus-within:pointer-events-auto
+
         transition-all
         duration-200
       "
@@ -1036,8 +1089,9 @@
       class="
         md:hidden
 
-        w-7
-        h-7
+        w-11
+        h-11
+        -mr-2
 
         flex
         items-center
@@ -2280,7 +2334,8 @@
         md:grid-cols-12
 
         gap-12
-        md:gap-20
+        md:gap-10
+        lg:gap-20
       "
     >
 
@@ -3286,6 +3341,17 @@
       ".reveal"
     );
 
+  // Sin IntersectionObserver, todo se muestra directamente
+  if (!("IntersectionObserver" in window)) {
+
+    revealElements.forEach(
+      (element) => element.classList.add("is-visible")
+    );
+
+  }
+
+  else {
+
   const revealObserver =
     new IntersectionObserver(
 
@@ -3333,6 +3399,8 @@
 
     }
   );
+
+  }
 
 </script>
 

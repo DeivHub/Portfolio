@@ -40,6 +40,11 @@
        TAILWIND
   ====================================================== -->
 
+  <!-- Las animaciones de entrada solo ocultan contenido si JavaScript funciona -->
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -301,7 +306,7 @@
        REVEAL
     ====================================================== */
 
-    .reveal {
+    .js .reveal {
 
       opacity: 0;
 
@@ -319,7 +324,7 @@
     }
 
 
-    .reveal.is-visible {
+    .js .reveal.is-visible {
 
       opacity: 1;
 
@@ -473,14 +478,18 @@
     }
 
 
-    .portfolio-button:hover {
+    @media (hover: hover) {
 
-      background: #11100E;
+      .portfolio-button:hover {
 
-      color: #FEFFF0;
+        background: #11100E;
 
-      transform:
-        translateY(-2px);
+        color: #FEFFF0;
+
+        transform:
+          translateY(-2px);
+
+      }
 
     }
 
@@ -495,11 +504,15 @@
     }
 
 
-    .portfolio-button-dark:hover {
+    @media (hover: hover) {
 
-      background: #FEFFF0;
+      .portfolio-button-dark:hover {
 
-      color: #11100E;
+        background: #FEFFF0;
+
+        color: #11100E;
+
+      }
 
     }
 
@@ -552,11 +565,15 @@
     }
 
 
-    .brand-card:hover {
+    @media (hover: hover) {
 
-      background: #11100E;
+      .brand-card:hover {
 
-      color: #FEFFF0;
+        background: #11100E;
+
+        color: #FEFFF0;
+
+      }
 
     }
 
@@ -660,11 +677,15 @@
     }
 
 
-    .ugc-card:hover {
+    @media (hover: hover) {
 
-      background: #FEFFF0;
+      .ugc-card:hover {
 
-      color: #11100E;
+        background: #FEFFF0;
+
+        color: #11100E;
+
+      }
 
     }
 
@@ -934,6 +955,44 @@
 
       }
 
+      .page-shell .concept-title {
+
+        font-size:
+          clamp(
+            3rem,
+            18vw,
+            4rem
+          );
+
+      }
+
+
+      /* Palabras largas ("GASTRONOMÍA.", "INDUMENTARIA")
+         entran completas desde pantallas de 320 px */
+
+      .section-title {
+
+        font-size:
+          clamp(
+            2.6rem,
+            12.6vw,
+            3.7rem
+          );
+
+      }
+
+
+      .cta-title {
+
+        font-size:
+          clamp(
+            2.8rem,
+            14vw,
+            4rem
+          );
+
+      }
+
 
       .brand-wall {
 
@@ -1009,7 +1068,7 @@
       }
 
 
-      .reveal {
+      .js .reveal {
 
         opacity: 1;
 
@@ -1173,6 +1232,10 @@
             group-hover:visible
             group-hover:pointer-events-auto
 
+            group-focus-within:opacity-100
+            group-focus-within:visible
+            group-focus-within:pointer-events-auto
+
             transition-all
             duration-200
           "
@@ -1313,8 +1376,9 @@
       class="
         md:hidden
 
-        w-7
-        h-7
+        w-11
+        h-11
+        -mr-2
 
         flex
         items-center
@@ -1464,6 +1528,26 @@
         "
       >
         Servicios
+      </a>
+
+
+      <a
+        href="../emprendedores/index.html"
+        class="
+          mobile-menu-link
+
+          border-b
+          border-[#FEFFF0]/10
+
+          py-5
+
+          text-3xl
+          font-medium
+
+          tracking-[-.03em]
+        "
+      >
+        Soy Emprendedor
       </a>
 
 
@@ -2783,7 +2867,8 @@
           <div class="lg:col-span-8">
 
             <h2
-              class="text-[4rem]
+              class="concept-title
+                     text-[4rem]
                      md:text-[6.5rem]
                      lg:text-[8rem]
                      leading-[0.82]
@@ -3197,6 +3282,8 @@
 
 
     </div>
+
+  </section>
 
   </div>
 
@@ -4190,7 +4277,7 @@
 
 
       <a
-        href="https://wa.me/5491151147647?text=Hola%20David%2C%20quiero%20hacer%20una%20campaña%20con%20mi%20marca."
+        href="https://wa.me/5491151147647?text=Hola%20David%2C%20quiero%20hacer%20una%20campa%C3%B1a%20con%20mi%20marca."
 
         target="_blank"
 
@@ -4292,6 +4379,17 @@
     );
 
 
+  // Sin IntersectionObserver, todo se muestra directamente
+  if (!("IntersectionObserver" in window)) {
+
+    revealElements.forEach(
+      (element) => element.classList.add("is-visible")
+    );
+
+  }
+
+  else {
+
   const revealObserver =
     new IntersectionObserver(
 
@@ -4340,6 +4438,8 @@
 
     }
   );
+
+  }
 
 </script>
 
